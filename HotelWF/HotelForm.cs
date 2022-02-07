@@ -1,8 +1,8 @@
 namespace HotelWF
 {
-    public partial class Form1 : Form
+    public partial class HotelForm : Form
     {
-        public Form1()
+        public HotelForm()
         {
             InitializeComponent();
         }
