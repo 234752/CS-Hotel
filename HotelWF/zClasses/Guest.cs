@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HotelWF.zClasses
 {
-    internal class Room
+    internal class Guest
     {
+        private string Name { get; }
+        private double Balance { get; set; }
+
+        public string getName() { return Name; }
+        public double getBalance() { return Balance; }
     }
 }
