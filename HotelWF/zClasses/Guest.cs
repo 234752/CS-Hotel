@@ -10,8 +10,13 @@ namespace HotelWF.zClasses
     {
         private string Name { get; }
         private double Balance { get; set; }
-
         public string getName() { return Name; }
         public double getBalance() { return Balance; }
+        public bool addBalance(double cash)
+        {
+            if (cash < 0) return false;
+            Balance += cash;
+            return true;
+        }
     }
 }
