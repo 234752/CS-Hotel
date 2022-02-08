@@ -8,7 +8,7 @@ namespace HotelWF.zClasses
 {
     internal class Guest
     {
-        private string Name { get; }
+        private string Name { get; set; }
         private double Balance { get; set; }
         public string getName() { return Name; }
         public double getBalance() { return Balance; }
