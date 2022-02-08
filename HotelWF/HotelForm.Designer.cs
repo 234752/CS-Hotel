@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.GuestGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // GuestGrid
+            // 
+            this.GuestGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestGrid.Location = new System.Drawing.Point(115, 136);
+            this.GuestGrid.Name = "GuestGrid";
+            this.GuestGrid.RowTemplate.Height = 25;
+            this.GuestGrid.Size = new System.Drawing.Size(345, 242);
+            this.GuestGrid.TabIndex = 0;
+            // 
+            // HotelForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.GuestGrid);
+            this.Name = "HotelForm";
+            this.Text = "HOTEL DATABASE";
+            ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DataGridView GuestGrid;
     }
 }
