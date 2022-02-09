@@ -28,5 +28,16 @@ namespace HotelWF
             }
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Room> RoomList = new List<Room>();
+            Room r1 = new Room(1, 30.4, 3);
+            Room r2 = new Room(1, 30.4, 3);
+            Room r3 = new Room(1, 30.4, 3);
+            RoomList.Add(r1);
+            RoomList.Add(r2);
+            RoomList.Add(r3);
+        }
     }
 }
