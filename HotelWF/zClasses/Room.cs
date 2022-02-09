@@ -25,5 +25,12 @@ namespace HotelWF.zClasses
                 return true;
             }else return false;
         }
+        public Room(int number0, double area0, int maxGuests0)
+        {
+            Number = number0;
+            Area = area0;
+            MaxGuests = maxGuests0;
+        }
+            
     }
 }
