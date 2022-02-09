@@ -36,6 +36,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +48,7 @@
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
             this.GuestBalance});
-            this.GuestGrid.Location = new System.Drawing.Point(115, 136);
+            this.GuestGrid.Location = new System.Drawing.Point(73, 379);
             this.GuestGrid.Name = "GuestGrid";
             this.GuestGrid.RowTemplate.Height = 25;
             this.GuestGrid.Size = new System.Drawing.Size(280, 242);
@@ -64,7 +66,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(480, 174);
+            this.button1.Location = new System.Drawing.Point(430, 511);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -77,16 +79,18 @@
             this.RoomGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RoomGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RoomNumber,
-            this.RoomArea});
-            this.RoomGrid.Location = new System.Drawing.Point(748, 312);
+            this.RoomArea,
+            this.RoomMaxGuests,
+            this.RoomNumberOfGuests});
+            this.RoomGrid.Location = new System.Drawing.Point(73, 99);
             this.RoomGrid.Name = "RoomGrid";
             this.RoomGrid.RowTemplate.Height = 25;
-            this.RoomGrid.Size = new System.Drawing.Size(260, 150);
+            this.RoomGrid.Size = new System.Drawing.Size(468, 150);
             this.RoomGrid.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1055, 379);
+            this.button2.Location = new System.Drawing.Point(701, 162);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -103,6 +107,16 @@
             // 
             this.RoomArea.HeaderText = "Area";
             this.RoomArea.Name = "RoomArea";
+            // 
+            // RoomMaxGuests
+            // 
+            this.RoomMaxGuests.HeaderText = "Max Guests";
+            this.RoomMaxGuests.Name = "RoomMaxGuests";
+            // 
+            // RoomNumberOfGuests
+            // 
+            this.RoomNumberOfGuests.HeaderText = "NumberOfGuests";
+            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
             // 
             // HotelForm
             // 
@@ -128,8 +142,10 @@
         private DataGridViewTextBoxColumn GuestBalance;
         private Button button1;
         private DataGridView RoomGrid;
+        private Button button2;
         private DataGridViewTextBoxColumn RoomNumber;
         private DataGridViewTextBoxColumn RoomArea;
-        private Button button2;
+        private DataGridViewTextBoxColumn RoomMaxGuests;
+        private DataGridViewTextBoxColumn RoomNumberOfGuests;
     }
 }

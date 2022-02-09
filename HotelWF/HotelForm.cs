@@ -63,6 +63,8 @@ namespace HotelWF
                 this.RoomGrid.Rows.Add();
                 this.RoomGrid.Rows[i].Cells[0].Value = RoomList[i].getNumber();
                 this.RoomGrid.Rows[i].Cells[1].Value = RoomList[i].getArea();
+                this.RoomGrid.Rows[i].Cells[2].Value = RoomList[i].getMaxGuests();
+                this.RoomGrid.Rows[i].Cells[3].Value = RoomList[i].getNumberOfGuests();
             }
         }
     }
