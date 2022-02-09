@@ -18,5 +18,10 @@ namespace HotelWF.zClasses
             Balance += cash;
             return true;
         }
+        public Guest(string name0, double balance0)
+        {
+            Name = name0;
+            Balance = balance0;
+        }
     }
 }
