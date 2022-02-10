@@ -31,12 +31,12 @@ namespace HotelWF.zFunctions
             r3.addGuest(g2);
             r3.addGuest(g3);
             r3.addGuest(g4);
-
+            
             H.addRoom(r1);
             H.addRoom(r2);
             H.addRoom(r3);
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < H.getRoomCount(); i++)
             {
                 DGV.Rows.Add();
                 DGV.Rows[i].Cells[0].Value = H.RoomList[i].getNumber();

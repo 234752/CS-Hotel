@@ -27,7 +27,7 @@ namespace HotelWF
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RoomFunctions.displayRooms(MainHotel, GuestGrid);
+            RoomFunctions.displayRooms(MainHotel, RoomGrid);
         }
     }
 }
