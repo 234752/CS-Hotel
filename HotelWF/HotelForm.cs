@@ -8,18 +8,13 @@ namespace HotelWF
         {
             InitializeComponent();
         }
-
+        List<Room> RoomList = new List<Room>();
         private void button1_Click(object sender, EventArgs e)
         {
-            Room r1 = new Room(1, 30.4, 3);
-            Guest g1 = new Guest("bob1", 200.1);
-            Guest g2 = new Guest("bob2", 200.2);
-            Guest g3 = new Guest("bob3", 200.3);
-            Guest g4 = new Guest("bob4", 200.4);
-            r1.addGuest(g1);
-            r1.addGuest(g2);
-            r1.addGuest(g3);
-            r1.addGuest(g4);
+            int index=this.RoomGrid.CurrentCell.RowIndex;
+            
+            Room r1 = RoomList[index];
+            this.GuestGrid.Rows.Clear();
             for(int i = 0; i < r1.getNumberOfGuests(); i++)
             {
                 this.GuestGrid.Rows.Add();
@@ -31,7 +26,7 @@ namespace HotelWF
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Room> RoomList = new List<Room>();
+            
 
             Guest g1 = new Guest("bob1", 200.1);            
             Guest g2 = new Guest("bob2", 200.2);         
