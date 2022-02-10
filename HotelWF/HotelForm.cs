@@ -8,12 +8,12 @@ namespace HotelWF
         {
             InitializeComponent();
         }
-        List<Room> RoomList = new List<Room>();
+        Hotel MainHotel = new Hotel();
         private void button1_Click(object sender, EventArgs e)
         {
             int index=this.RoomGrid.CurrentCell.RowIndex;
             
-            Room r1 = RoomList[index];
+            Room r1 = MainHotel.RoomList[index];
             this.GuestGrid.Rows.Clear();
             for(int i = 0; i < r1.getNumberOfGuests(); i++)
             {
@@ -49,17 +49,17 @@ namespace HotelWF
             r3.addGuest(g3);
             r3.addGuest(g4);
 
-            RoomList.Add(r1);
-            RoomList.Add(r2);
-            RoomList.Add(r3);
+            MainHotel.addRoom(r1);
+            MainHotel.addRoom(r2);
+            MainHotel.addRoom(r3);
 
-            for(int i = 0;i<RoomList.Count;i++)
+            for(int i = 0; i<MainHotel.getRoomCount(); i++)
             {
                 this.RoomGrid.Rows.Add();
-                this.RoomGrid.Rows[i].Cells[0].Value = RoomList[i].getNumber();
-                this.RoomGrid.Rows[i].Cells[1].Value = RoomList[i].getArea();
-                this.RoomGrid.Rows[i].Cells[2].Value = RoomList[i].getMaxGuests();
-                this.RoomGrid.Rows[i].Cells[3].Value = RoomList[i].getNumberOfGuests();
+                this.RoomGrid.Rows[i].Cells[0].Value = MainHotel.RoomList[i].getNumber();
+                this.RoomGrid.Rows[i].Cells[1].Value = MainHotel.RoomList[i].getArea();
+                this.RoomGrid.Rows[i].Cells[2].Value = MainHotel.RoomList[i].getMaxGuests();
+                this.RoomGrid.Rows[i].Cells[3].Value = MainHotel.RoomList[i].getNumberOfGuests();
             }
         }
     }

@@ -8,7 +8,7 @@ namespace HotelWF.zClasses
 {
     internal class Hotel
     {
-        public List<Room> RoomList { get; set; }
+        public List<Room> RoomList = new List<Room>();
         public int getRoomCount() { return RoomList.Count; }
         public void addRoom(Room R)
         {
