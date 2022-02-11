@@ -108,6 +108,7 @@
             this.addRoomButton.TabIndex = 3;
             this.addRoomButton.Text = "Add Room";
             this.addRoomButton.UseVisualStyleBackColor = true;
+            this.addRoomButton.Click += new System.EventHandler(this.addRoomButton_Click);
             // 
             // AddRoomNoInput
             // 

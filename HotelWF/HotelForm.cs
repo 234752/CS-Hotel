@@ -10,17 +10,17 @@ namespace HotelWF
             InitializeComponent();
         }
         Hotel MainHotel = new Hotel();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int index = this.RoomGrid.CurrentCell.RowIndex;
 
-            GuestFunctions.DisplayGuests(MainHotel, GuestGrid, index);
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void addRoomButton_Click(object sender, EventArgs e)
         {
-            RoomFunctions.displayRooms(MainHotel, RoomGrid);
+            int n0 = 0;
+            double a0 = 1.0;
+            int g0 = 1;
+            Int32.TryParse(this.AddRoomNoInput.Text, out n0);
+            Double.TryParse(this.AddRoomAreaInput.Text, out a0);
+            Int32.TryParse(this.AddRoomMaxGuestsInput.Text, out g0);
+
+            MainHotel.addRoom(new Room(n0, a0, g0));
         }
     }
 }
