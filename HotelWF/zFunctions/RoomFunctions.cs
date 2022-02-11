@@ -11,6 +11,7 @@ namespace HotelWF.zFunctions
     {
         public static void displayRooms(Hotel H, DataGridView DGV)
         {
+            DGV.Rows.Clear();
             for (int i = 0; i < H.getRoomCount(); i++)
             {
                 DGV.Rows.Add();
