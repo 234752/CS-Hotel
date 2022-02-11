@@ -31,13 +31,15 @@
             this.GuestGrid = new System.Windows.Forms.DataGridView();
             this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addRoomButton = new System.Windows.Forms.Button();
+            this.AddRoomNoInput = new System.Windows.Forms.TextBox();
+            this.AddRoomAreaInput = new System.Windows.Forms.TextBox();
+            this.AddRoomMaxGuestsInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -48,10 +50,10 @@
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
             this.GuestBalance});
-            this.GuestGrid.Location = new System.Drawing.Point(73, 379);
+            this.GuestGrid.Location = new System.Drawing.Point(60, 341);
             this.GuestGrid.Name = "GuestGrid";
             this.GuestGrid.RowTemplate.Height = 25;
-            this.GuestGrid.Size = new System.Drawing.Size(280, 242);
+            this.GuestGrid.Size = new System.Drawing.Size(247, 242);
             this.GuestGrid.TabIndex = 0;
             // 
             // GuestName
@@ -64,16 +66,6 @@
             this.GuestBalance.HeaderText = "Balance";
             this.GuestBalance.Name = "GuestBalance";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(430, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // RoomGrid
             // 
             this.RoomGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -82,21 +74,11 @@
             this.RoomArea,
             this.RoomMaxGuests,
             this.RoomNumberOfGuests});
-            this.RoomGrid.Location = new System.Drawing.Point(73, 99);
+            this.RoomGrid.Location = new System.Drawing.Point(60, 151);
             this.RoomGrid.Name = "RoomGrid";
             this.RoomGrid.RowTemplate.Height = 25;
-            this.RoomGrid.Size = new System.Drawing.Size(468, 150);
+            this.RoomGrid.Size = new System.Drawing.Size(445, 150);
             this.RoomGrid.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(701, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // RoomNumber
             // 
@@ -118,20 +100,53 @@
             this.RoomNumberOfGuests.HeaderText = "NumberOfGuests";
             this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
             // 
+            // addRoomButton
+            // 
+            this.addRoomButton.Location = new System.Drawing.Point(430, 93);
+            this.addRoomButton.Name = "addRoomButton";
+            this.addRoomButton.Size = new System.Drawing.Size(75, 23);
+            this.addRoomButton.TabIndex = 3;
+            this.addRoomButton.Text = "Add Room";
+            this.addRoomButton.UseVisualStyleBackColor = true;
+            // 
+            // AddRoomNoInput
+            // 
+            this.AddRoomNoInput.Location = new System.Drawing.Point(110, 93);
+            this.AddRoomNoInput.Name = "AddRoomNoInput";
+            this.AddRoomNoInput.Size = new System.Drawing.Size(67, 23);
+            this.AddRoomNoInput.TabIndex = 4;
+            // 
+            // AddRoomAreaInput
+            // 
+            this.AddRoomAreaInput.Location = new System.Drawing.Point(207, 93);
+            this.AddRoomAreaInput.Name = "AddRoomAreaInput";
+            this.AddRoomAreaInput.Size = new System.Drawing.Size(70, 23);
+            this.AddRoomAreaInput.TabIndex = 5;
+            // 
+            // AddRoomMaxGuestsInput
+            // 
+            this.AddRoomMaxGuestsInput.Location = new System.Drawing.Point(311, 93);
+            this.AddRoomMaxGuestsInput.Name = "AddRoomMaxGuestsInput";
+            this.AddRoomMaxGuestsInput.Size = new System.Drawing.Size(74, 23);
+            this.AddRoomMaxGuestsInput.TabIndex = 6;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.AddRoomMaxGuestsInput);
+            this.Controls.Add(this.AddRoomAreaInput);
+            this.Controls.Add(this.AddRoomNoInput);
+            this.Controls.Add(this.addRoomButton);
             this.Controls.Add(this.RoomGrid);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.GuestGrid);
             this.Name = "HotelForm";
             this.Text = "HOTEL DATABASE";
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,12 +155,14 @@
         private DataGridView GuestGrid;
         private DataGridViewTextBoxColumn GuestName;
         private DataGridViewTextBoxColumn GuestBalance;
-        private Button button1;
         private DataGridView RoomGrid;
-        private Button button2;
         private DataGridViewTextBoxColumn RoomNumber;
         private DataGridViewTextBoxColumn RoomArea;
         private DataGridViewTextBoxColumn RoomMaxGuests;
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
+        private Button addRoomButton;
+        private TextBox AddRoomNoInput;
+        private TextBox AddRoomAreaInput;
+        private TextBox AddRoomMaxGuestsInput;
     }
 }
