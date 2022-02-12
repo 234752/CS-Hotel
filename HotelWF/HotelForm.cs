@@ -26,7 +26,13 @@ namespace HotelWF
 
         private void AddGuestButton_Click(object sender, EventArgs e)
         {
+            int index = this.RoomGrid.CurrentCell.RowIndex;
 
+            double b0 = 0.0;
+            string n0 = this.addGuestNameInput.Text;
+            Double.TryParse(this.addGuestBalanceInput.Text, out b0);
+
+            MainHotel.RoomList[index].addGuest(new Guest(n0, b0));
         }
     }
 }
