@@ -44,6 +44,7 @@
             this.addGuestNameInput = new System.Windows.Forms.TextBox();
             this.addGuestBalanceInput = new System.Windows.Forms.TextBox();
             this.displayGuestsButton = new System.Windows.Forms.Button();
+            this.removeGuestButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -169,11 +170,21 @@
             this.displayGuestsButton.UseVisualStyleBackColor = true;
             this.displayGuestsButton.Click += new System.EventHandler(this.displayGuestsButton_Click);
             // 
+            // removeGuestButton
+            // 
+            this.removeGuestButton.Location = new System.Drawing.Point(366, 472);
+            this.removeGuestButton.Name = "removeGuestButton";
+            this.removeGuestButton.Size = new System.Drawing.Size(75, 46);
+            this.removeGuestButton.TabIndex = 11;
+            this.removeGuestButton.Text = "Remove Guest";
+            this.removeGuestButton.UseVisualStyleBackColor = true;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.removeGuestButton);
             this.Controls.Add(this.displayGuestsButton);
             this.Controls.Add(this.addGuestBalanceInput);
             this.Controls.Add(this.addGuestNameInput);
@@ -211,5 +222,6 @@
         private TextBox addGuestNameInput;
         private TextBox addGuestBalanceInput;
         private Button displayGuestsButton;
+        private Button removeGuestButton;
     }
 }
