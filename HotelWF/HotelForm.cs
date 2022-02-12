@@ -27,29 +27,27 @@ namespace HotelWF
 
         private void addGuestButton_Click(object sender, EventArgs e)
         {
-            int index = this.RoomGrid.CurrentCell.RowIndex;
+            int indexR = this.RoomGrid.CurrentCell.RowIndex;
+            CurrentRoom = MainHotel.RoomList[indexR];
 
             double b0 = 0.0;
             string n0 = this.addGuestNameInput.Text;
             Double.TryParse(this.addGuestBalanceInput.Text, out b0);
 
-            MainHotel.RoomList[index].addGuest(new Guest(n0, b0));
+            CurrentRoom.addGuest(new Guest(n0, b0));
 
-            CurrentRoom = MainHotel.RoomList[index];
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
         }
 
         private void displayGuestsButton_Click(object sender, EventArgs e)
         {
-            int index = this.RoomGrid.CurrentCell.RowIndex;
-
-            CurrentRoom = MainHotel.RoomList[index];
+            int indexR = this.RoomGrid.CurrentCell.RowIndex;
+            CurrentRoom = MainHotel.RoomList[indexR];
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
         }
 
         private void removeGuestButton_Click(object sender, EventArgs e)
         {
-            int index = MainHotel.RoomList.FindIndex( room => room == CurrentRoom);
             int indexG = this.GuestGrid.CurrentCell.RowIndex;
             CurrentRoom.Guests.RemoveAt(indexG);
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
