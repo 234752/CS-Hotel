@@ -40,6 +40,9 @@
             this.AddRoomNoInput = new System.Windows.Forms.TextBox();
             this.AddRoomAreaInput = new System.Windows.Forms.TextBox();
             this.AddRoomMaxGuestsInput = new System.Windows.Forms.TextBox();
+            this.AddGuestButton = new System.Windows.Forms.Button();
+            this.AddGuestNameInput = new System.Windows.Forms.TextBox();
+            this.AddGuestBalanceInput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +53,7 @@
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
             this.GuestBalance});
-            this.GuestGrid.Location = new System.Drawing.Point(60, 341);
+            this.GuestGrid.Location = new System.Drawing.Point(60, 398);
             this.GuestGrid.Name = "GuestGrid";
             this.GuestGrid.RowTemplate.Height = 25;
             this.GuestGrid.Size = new System.Drawing.Size(247, 242);
@@ -131,11 +134,37 @@
             this.AddRoomMaxGuestsInput.Size = new System.Drawing.Size(74, 23);
             this.AddRoomMaxGuestsInput.TabIndex = 6;
             // 
+            // AddGuestButton
+            // 
+            this.AddGuestButton.Location = new System.Drawing.Point(334, 362);
+            this.AddGuestButton.Name = "AddGuestButton";
+            this.AddGuestButton.Size = new System.Drawing.Size(75, 23);
+            this.AddGuestButton.TabIndex = 7;
+            this.AddGuestButton.Text = "Add Guest";
+            this.AddGuestButton.UseVisualStyleBackColor = true;
+            // 
+            // AddGuestNameInput
+            // 
+            this.AddGuestNameInput.Location = new System.Drawing.Point(105, 362);
+            this.AddGuestNameInput.Name = "AddGuestNameInput";
+            this.AddGuestNameInput.Size = new System.Drawing.Size(72, 23);
+            this.AddGuestNameInput.TabIndex = 8;
+            // 
+            // AddGuestBalanceInput
+            // 
+            this.AddGuestBalanceInput.Location = new System.Drawing.Point(207, 362);
+            this.AddGuestBalanceInput.Name = "AddGuestBalanceInput";
+            this.AddGuestBalanceInput.Size = new System.Drawing.Size(70, 23);
+            this.AddGuestBalanceInput.TabIndex = 9;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.AddGuestBalanceInput);
+            this.Controls.Add(this.AddGuestNameInput);
+            this.Controls.Add(this.AddGuestButton);
             this.Controls.Add(this.AddRoomMaxGuestsInput);
             this.Controls.Add(this.AddRoomAreaInput);
             this.Controls.Add(this.AddRoomNoInput);
@@ -165,5 +194,8 @@
         private TextBox AddRoomNoInput;
         private TextBox AddRoomAreaInput;
         private TextBox AddRoomMaxGuestsInput;
+        private Button AddGuestButton;
+        private TextBox AddGuestNameInput;
+        private TextBox AddGuestBalanceInput;
     }
 }
