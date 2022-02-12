@@ -9,7 +9,7 @@ namespace HotelWF.zFunctions
 {
     internal static class GuestFunctions
     {
-        public static void DisplayGuests(Hotel H, DataGridView DGV, int index)
+        public static void displayGuests(Hotel H, DataGridView DGV, int index)
         {
             
 

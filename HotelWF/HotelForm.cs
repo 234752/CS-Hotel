@@ -24,7 +24,7 @@ namespace HotelWF
             RoomFunctions.displayRooms(MainHotel, RoomGrid);
         }
 
-        private void AddGuestButton_Click(object sender, EventArgs e)
+        private void addGuestButton_Click(object sender, EventArgs e)
         {
             int index = this.RoomGrid.CurrentCell.RowIndex;
 
@@ -33,6 +33,7 @@ namespace HotelWF
             Double.TryParse(this.addGuestBalanceInput.Text, out b0);
 
             MainHotel.RoomList[index].addGuest(new Guest(n0, b0));
+            GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
         }
     }
 }

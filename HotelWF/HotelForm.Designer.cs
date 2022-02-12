@@ -142,7 +142,7 @@
             this.addGuestButton.TabIndex = 7;
             this.addGuestButton.Text = "Add Guest";
             this.addGuestButton.UseVisualStyleBackColor = true;
-            this.addGuestButton.Click += new System.EventHandler(this.AddGuestButton_Click);
+            this.addGuestButton.Click += new System.EventHandler(this.addGuestButton_Click);
             // 
             // addGuestNameInput
             // 
