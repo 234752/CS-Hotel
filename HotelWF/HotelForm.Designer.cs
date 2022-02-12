@@ -178,6 +178,7 @@
             this.removeGuestButton.TabIndex = 11;
             this.removeGuestButton.Text = "Remove Guest";
             this.removeGuestButton.UseVisualStyleBackColor = true;
+            this.removeGuestButton.Click += new System.EventHandler(this.removeGuestButton_Click);
             // 
             // HotelForm
             // 
