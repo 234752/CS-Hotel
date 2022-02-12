@@ -38,7 +38,8 @@ namespace HotelWF
 
         private void displayGuestsButton_Click(object sender, EventArgs e)
         {
-
+            int index = this.RoomGrid.CurrentCell.RowIndex;
+            GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
         }
     }
 }
