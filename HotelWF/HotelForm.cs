@@ -35,5 +35,10 @@ namespace HotelWF
             MainHotel.RoomList[index].addGuest(new Guest(n0, b0));
             GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
         }
+
+        private void displayGuestsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
