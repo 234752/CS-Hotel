@@ -36,7 +36,7 @@ namespace HotelWF
             MainHotel.RoomList[index].addGuest(new Guest(n0, b0));
 
             CurrentRoom = MainHotel.RoomList[index];
-            GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
+            GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
         }
 
         private void displayGuestsButton_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace HotelWF
             int index = this.RoomGrid.CurrentCell.RowIndex;
 
             CurrentRoom = MainHotel.RoomList[index];
-            GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
+            GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
         }
 
         private void removeGuestButton_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace HotelWF
             int index = MainHotel.RoomList.FindIndex( room => room == CurrentRoom);
             int indexG = this.GuestGrid.CurrentCell.RowIndex;
             CurrentRoom.Guests.RemoveAt(indexG);
-            GuestFunctions.displayGuests(MainHotel, GuestGrid, index);
+            GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
         }
     }
 }
