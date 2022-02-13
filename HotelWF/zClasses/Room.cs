@@ -12,6 +12,13 @@ namespace HotelWF.zClasses
         private double Area { get; set; }
         private int MaxGuests { get; set; }
         public List<Guest> Guests { get; set; } = new List<Guest>();
+        public Room(int number0, double area0, int maxGuests0)
+        {
+            Number = number0;
+            Area = area0;
+            MaxGuests = maxGuests0;
+        }
+
         public int getNumber() { return Number; }
         public double getArea() { return Area; }
         public int getNumberOfGuests() { return Guests.Count; }
@@ -25,12 +32,8 @@ namespace HotelWF.zClasses
                 return true;
             }else return false;
         }
-        public Room(int number0, double area0, int maxGuests0)
-        {
-            Number = number0;
-            Area = area0;
-            MaxGuests = maxGuests0;
-        }
+        
+        public virtual double getFee() { return 99.99; }
             
     }
 }
