@@ -28,7 +28,6 @@ namespace HotelWF
             Int32.TryParse(this.addRoomMaxGuestsInput.Text, out g0);
 
             MainHotel.addRoom(new RegularRoom(n0, a0, g0));
-            //RoomFunctions.displayRooms(MainHotel, RoomGrid);
             REFRESH();
         }
 
@@ -42,8 +41,6 @@ namespace HotelWF
             Double.TryParse(this.addGuestBalanceInput.Text, out b0);
 
             CurrentRoom.addGuest(new Guest(n0, b0));
-
-            //GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
             REFRESH();
         }
 
@@ -51,7 +48,6 @@ namespace HotelWF
         {
             int indexR = this.RoomGrid.CurrentCell.RowIndex;
             CurrentRoom = MainHotel.RoomList[indexR];
-            //GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
             REFRESH();
         }
 
@@ -59,7 +55,6 @@ namespace HotelWF
         {
             int indexG = this.GuestGrid.CurrentCell.RowIndex;
             CurrentRoom.Guests.RemoveAt(indexG);
-            //GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
             REFRESH();
         }
     }
