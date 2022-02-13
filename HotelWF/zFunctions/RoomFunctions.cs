@@ -19,6 +19,7 @@ namespace HotelWF.zFunctions
                 DGV.Rows[i].Cells[1].Value = H.RoomList[i].getArea();
                 DGV.Rows[i].Cells[2].Value = H.RoomList[i].getMaxGuests();
                 DGV.Rows[i].Cells[3].Value = H.RoomList[i].getNumberOfGuests();
+                DGV.Rows[i].Cells[4].Value = H.RoomList[i].getFee();
             }
         }
     }
