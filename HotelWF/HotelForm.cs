@@ -21,7 +21,7 @@ namespace HotelWF
             Double.TryParse(this.addRoomAreaInput.Text, out a0);
             Int32.TryParse(this.addRoomMaxGuestsInput.Text, out g0);
 
-            MainHotel.addRoom(new Room(n0, a0, g0));
+            MainHotel.addRoom(new RegularRoom(n0, a0, g0));
             RoomFunctions.displayRooms(MainHotel, RoomGrid);
         }
 
