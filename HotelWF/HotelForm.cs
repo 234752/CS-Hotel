@@ -64,5 +64,12 @@ namespace HotelWF
             CurrentRoom.Guests.RemoveAt(indexG);
             REFRESH();
         }
+
+        private void RoomGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexR = this.RoomGrid.CurrentCell.RowIndex;
+            CurrentRoom = MainHotel.RoomList[indexR];
+            REFRESH();
+        }
     }
 }

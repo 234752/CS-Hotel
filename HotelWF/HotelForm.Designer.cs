@@ -88,6 +88,7 @@
             this.RoomGrid.RowTemplate.Height = 25;
             this.RoomGrid.Size = new System.Drawing.Size(559, 150);
             this.RoomGrid.TabIndex = 2;
+            this.RoomGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomGrid_CellClick);
             // 
             // RoomNumber
             // 
