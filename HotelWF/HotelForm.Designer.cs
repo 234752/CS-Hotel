@@ -32,6 +32,11 @@
             this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addRoomButton = new System.Windows.Forms.Button();
             this.addRoomNoInput = new System.Windows.Forms.TextBox();
             this.addRoomAreaInput = new System.Windows.Forms.TextBox();
@@ -41,11 +46,8 @@
             this.addGuestBalanceInput = new System.Windows.Forms.TextBox();
             this.displayGuestsButton = new System.Windows.Forms.Button();
             this.removeGuestButton = new System.Windows.Forms.Button();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegularRoomSwitch = new System.Windows.Forms.RadioButton();
+            this.OfficeRoomSwitch = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +88,31 @@
             this.RoomGrid.RowTemplate.Height = 25;
             this.RoomGrid.Size = new System.Drawing.Size(559, 150);
             this.RoomGrid.TabIndex = 2;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.HeaderText = "No";
+            this.RoomNumber.Name = "RoomNumber";
+            // 
+            // RoomArea
+            // 
+            this.RoomArea.HeaderText = "Area";
+            this.RoomArea.Name = "RoomArea";
+            // 
+            // RoomMaxGuests
+            // 
+            this.RoomMaxGuests.HeaderText = "Max Guests";
+            this.RoomMaxGuests.Name = "RoomMaxGuests";
+            // 
+            // RoomNumberOfGuests
+            // 
+            this.RoomNumberOfGuests.HeaderText = "NumberOfGuests";
+            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
+            // 
+            // RoomFee
+            // 
+            this.RoomFee.HeaderText = "Fee";
+            this.RoomFee.Name = "RoomFee";
             // 
             // addRoomButton
             // 
@@ -162,36 +189,35 @@
             this.removeGuestButton.UseVisualStyleBackColor = true;
             this.removeGuestButton.Click += new System.EventHandler(this.removeGuestButton_Click);
             // 
-            // RoomNumber
+            // RegularRoomSwitch
             // 
-            this.RoomNumber.HeaderText = "No";
-            this.RoomNumber.Name = "RoomNumber";
+            this.RegularRoomSwitch.AutoSize = true;
+            this.RegularRoomSwitch.Location = new System.Drawing.Point(548, 76);
+            this.RegularRoomSwitch.Name = "RegularRoomSwitch";
+            this.RegularRoomSwitch.Size = new System.Drawing.Size(100, 19);
+            this.RegularRoomSwitch.TabIndex = 12;
+            this.RegularRoomSwitch.TabStop = true;
+            this.RegularRoomSwitch.Text = "Regular Room";
+            this.RegularRoomSwitch.UseVisualStyleBackColor = true;
             // 
-            // RoomArea
+            // OfficeRoomSwitch
             // 
-            this.RoomArea.HeaderText = "Area";
-            this.RoomArea.Name = "RoomArea";
-            // 
-            // RoomMaxGuests
-            // 
-            this.RoomMaxGuests.HeaderText = "Max Guests";
-            this.RoomMaxGuests.Name = "RoomMaxGuests";
-            // 
-            // RoomNumberOfGuests
-            // 
-            this.RoomNumberOfGuests.HeaderText = "NumberOfGuests";
-            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
-            // 
-            // RoomFee
-            // 
-            this.RoomFee.HeaderText = "Fee";
-            this.RoomFee.Name = "RoomFee";
+            this.OfficeRoomSwitch.AutoSize = true;
+            this.OfficeRoomSwitch.Location = new System.Drawing.Point(548, 113);
+            this.OfficeRoomSwitch.Name = "OfficeRoomSwitch";
+            this.OfficeRoomSwitch.Size = new System.Drawing.Size(92, 19);
+            this.OfficeRoomSwitch.TabIndex = 13;
+            this.OfficeRoomSwitch.TabStop = true;
+            this.OfficeRoomSwitch.Text = "Office Room";
+            this.OfficeRoomSwitch.UseVisualStyleBackColor = true;
             // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.OfficeRoomSwitch);
+            this.Controls.Add(this.RegularRoomSwitch);
             this.Controls.Add(this.removeGuestButton);
             this.Controls.Add(this.displayGuestsButton);
             this.Controls.Add(this.addGuestBalanceInput);
@@ -232,5 +258,7 @@
         private DataGridViewTextBoxColumn RoomMaxGuests;
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
         private DataGridViewTextBoxColumn RoomFee;
+        private RadioButton RegularRoomSwitch;
+        private RadioButton OfficeRoomSwitch;
     }
 }
