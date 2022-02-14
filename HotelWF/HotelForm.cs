@@ -17,8 +17,10 @@ namespace HotelWF
         {
             RoomFunctions.displayRooms(MainHotel, RoomGrid);
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
-            this.RoomGrid.CurrentCell = null;
+
             this.GuestGrid.CurrentCell = null;
+
+            this.RoomGrid.CurrentCell = this.RoomGrid.Rows[MainHotel.RoomList.IndexOf(CurrentRoom)].Cells[0];
         }
 
         private void addRoomButton_Click(object sender, EventArgs e)
