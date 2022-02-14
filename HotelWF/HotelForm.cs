@@ -17,6 +17,8 @@ namespace HotelWF
         {
             RoomFunctions.displayRooms(MainHotel, RoomGrid);
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
+            this.RoomGrid.CurrentCell = null;
+            this.GuestGrid.CurrentCell = null;
         }
 
         private void addRoomButton_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace HotelWF
 
             if(this.RegularRoomSwitch.Checked==true) { MainHotel.addRoom(new RegularRoom(n0, a0, g0)); }
             else if(this.OfficeRoomSwitch.Checked == true) { MainHotel.addRoom(new OfficeRoom(n0, a0, g0)); }
+            CurrentRoom = MainHotel.RoomList.Last();
             REFRESH();
         }
 
