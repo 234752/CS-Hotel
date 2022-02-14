@@ -8,6 +8,7 @@ namespace HotelWF
         public HotelForm()
         {
             InitializeComponent();
+            this.RegularRoomSwitch.Checked = true;
         }
         Hotel MainHotel = new Hotel();
         Room CurrentRoom = new Room(999, 99.99, 9);
@@ -27,7 +28,8 @@ namespace HotelWF
             Double.TryParse(this.addRoomAreaInput.Text, out a0);
             Int32.TryParse(this.addRoomMaxGuestsInput.Text, out g0);
 
-            MainHotel.addRoom(new RegularRoom(n0, a0, g0));
+            if(this.RegularRoomSwitch.Checked==true) { MainHotel.addRoom(new RegularRoom(n0, a0, g0)); }
+            else if(this.OfficeRoomSwitch.Checked == true) { MainHotel.addRoom(new OfficeRoom(n0, a0, g0)); }
             REFRESH();
         }
 
