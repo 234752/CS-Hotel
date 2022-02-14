@@ -20,7 +20,9 @@ namespace HotelWF
 
             this.GuestGrid.CurrentCell = null;
 
-            this.RoomGrid.CurrentCell = this.RoomGrid.Rows[MainHotel.RoomList.IndexOf(CurrentRoom)].Cells[0];
+            int currentIndex = MainHotel.RoomList.IndexOf(CurrentRoom);
+            this.RoomGrid.CurrentCell = this.RoomGrid.Rows[currentIndex].Cells[0];
+            this.RoomGrid.Rows[currentIndex].Selected = true;
         }
 
         private void addRoomButton_Click(object sender, EventArgs e)
