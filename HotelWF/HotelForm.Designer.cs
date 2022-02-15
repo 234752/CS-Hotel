@@ -55,6 +55,8 @@
             // 
             // GuestGrid
             // 
+            this.GuestGrid.AllowUserToAddRows = false;
+            this.GuestGrid.AllowUserToDeleteRows = false;
             this.GuestGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
@@ -77,6 +79,8 @@
             // 
             // RoomGrid
             // 
+            this.RoomGrid.AllowUserToAddRows = false;
+            this.RoomGrid.AllowUserToDeleteRows = false;
             this.RoomGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RoomGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RoomNumber,
