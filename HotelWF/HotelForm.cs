@@ -63,8 +63,8 @@ namespace HotelWF
                 string n0 = this.addGuestNameInput.Text;
                 if(b0<0.0 || n0=="") throw new Exception();
 
-                CurrentRoom.addGuest(new Guest(n0, b0));
-                REFRESH();
+                if(!CurrentRoom.addGuest(new Guest(n0, b0))) this.ErrorLabel.Text = "Cannot add this guest, room is full";
+                else REFRESH();
             }
             catch (Exception ex)
             {
