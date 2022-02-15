@@ -20,9 +20,12 @@ namespace HotelWF
 
             this.GuestGrid.CurrentCell = null;
 
-            int currentIndex = MainHotel.RoomList.IndexOf(CurrentRoom);
-            this.RoomGrid.CurrentCell = this.RoomGrid.Rows[currentIndex].Cells[0];
-            this.RoomGrid.Rows[currentIndex].Selected = true;
+            if (MainHotel.getRoomCount() != 0)
+            {
+                int currentIndex = MainHotel.RoomList.IndexOf(CurrentRoom);
+                this.RoomGrid.CurrentCell = this.RoomGrid.Rows[currentIndex].Cells[0];
+                this.RoomGrid.Rows[currentIndex].Selected = true;
+            }
             this.ErrorLabel.Text = "";
         }
 
@@ -33,20 +36,22 @@ namespace HotelWF
                 int n0 = 0;
                 double a0 = 1.0;
                 int g0 = 1;
-                Int32.TryParse(this.addRoomNoInput.Text, out n0);
-                Double.TryParse(this.addRoomAreaInput.Text, out a0);
-                Int32.TryParse(this.addRoomMaxGuestsInput.Text, out g0);
+                n0=int.Parse(this.addRoomNoInput.Text);
+                a0=double.Parse(this.addRoomAreaInput.Text);
+                g0=int.Parse(this.addRoomMaxGuestsInput.Text);
 
                 if (this.RegularRoomSwitch.Checked == true) { MainHotel.addRoom(new RegularRoom(n0, a0, g0)); }
                 else if (this.OfficeRoomSwitch.Checked == true) { MainHotel.addRoom(new OfficeRoom(n0, a0, g0)); }
                 else throw new Exception();
 
                 CurrentRoom = MainHotel.RoomList.Last();
-            }catch (Exception ex)
+                REFRESH();
+            }
+            catch (Exception ex)
             {
                 this.ErrorLabel.Text = "Cannot add this room, make sure that entered data is valid";
             }
-            REFRESH();
+            
         }
 
         private void addGuestButton_Click(object sender, EventArgs e)
