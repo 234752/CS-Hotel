@@ -74,9 +74,20 @@ namespace HotelWF
 
         private void displayGuestsButton_Click(object sender, EventArgs e)
         {
-            int indexR = this.RoomGrid.CurrentCell.RowIndex;
-            CurrentRoom = MainHotel.RoomList[indexR];
-            REFRESH();
+            try
+            {
+                if (this.RoomGrid.CurrentCell == null) throw new Exception();
+                else
+                {
+                    int indexR = this.RoomGrid.CurrentCell.RowIndex;
+                    CurrentRoom = MainHotel.RoomList[indexR];
+                }
+                REFRESH();
+            }
+            catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot display guests, room not selected";
+            }
         }
 
         private void removeGuestButton_Click(object sender, EventArgs e)
