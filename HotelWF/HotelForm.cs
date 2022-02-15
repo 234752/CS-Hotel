@@ -33,12 +33,9 @@ namespace HotelWF
         {
             try
             {
-                int n0 = 0;
-                double a0 = 1.0;
-                int g0 = 1;
-                n0=int.Parse(this.addRoomNoInput.Text);
-                a0=double.Parse(this.addRoomAreaInput.Text);
-                g0=int.Parse(this.addRoomMaxGuestsInput.Text);
+                int n0 = int.Parse(this.addRoomNoInput.Text);
+                double a0 = double.Parse(this.addRoomAreaInput.Text);
+                int g0 = int.Parse(this.addRoomMaxGuestsInput.Text);
 
                 if (this.RegularRoomSwitch.Checked == true) { MainHotel.addRoom(new RegularRoom(n0, a0, g0)); }
                 else if (this.OfficeRoomSwitch.Checked == true) { MainHotel.addRoom(new OfficeRoom(n0, a0, g0)); }
@@ -56,15 +53,23 @@ namespace HotelWF
 
         private void addGuestButton_Click(object sender, EventArgs e)
         {
-            int indexR = this.RoomGrid.CurrentCell.RowIndex;
-            CurrentRoom = MainHotel.RoomList[indexR];
+            try
+            {
 
-            double b0 = 0.0;
-            string n0 = this.addGuestNameInput.Text;
-            Double.TryParse(this.addGuestBalanceInput.Text, out b0);
+                int indexR = this.RoomGrid.CurrentCell.RowIndex;
+                CurrentRoom = MainHotel.RoomList[indexR];
 
-            CurrentRoom.addGuest(new Guest(n0, b0));
-            REFRESH();
+                double b0 = double.Parse(this.addGuestBalanceInput.Text);
+                string n0 = this.addGuestNameInput.Text;
+                if(b0<0.0 || n0=="") throw new Exception();
+
+                CurrentRoom.addGuest(new Guest(n0, b0));
+                REFRESH();
+            }
+            catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot add this guest, make sure that entered data is valid";
+            }
         }
 
         private void displayGuestsButton_Click(object sender, EventArgs e)
