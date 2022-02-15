@@ -92,9 +92,20 @@ namespace HotelWF
 
         private void removeGuestButton_Click(object sender, EventArgs e)
         {
-            int indexG = this.GuestGrid.CurrentCell.RowIndex;
-            CurrentRoom.Guests.RemoveAt(indexG);
-            REFRESH();
+            try
+            {
+                if(this.GuestGrid.CurrentCell == null) throw new Exception();
+                else
+                {
+                    int indexG = this.GuestGrid.CurrentCell.RowIndex;
+                    CurrentRoom.Guests.RemoveAt(indexG);
+                }
+                REFRESH();
+            }
+            catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot delete this guest, none was selected";
+            }
         }
 
         private void RoomGrid_CellClick(object sender, DataGridViewCellEventArgs e)
