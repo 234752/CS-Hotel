@@ -48,6 +48,7 @@
             this.removeGuestButton = new System.Windows.Forms.Button();
             this.RegularRoomSwitch = new System.Windows.Forms.RadioButton();
             this.OfficeRoomSwitch = new System.Windows.Forms.RadioButton();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -212,11 +213,21 @@
             this.OfficeRoomSwitch.Text = "Office Room";
             this.OfficeRoomSwitch.UseVisualStyleBackColor = true;
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(986, 125);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 15);
+            this.ErrorLabel.TabIndex = 14;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.OfficeRoomSwitch);
             this.Controls.Add(this.RegularRoomSwitch);
             this.Controls.Add(this.removeGuestButton);
@@ -261,5 +272,6 @@
         private DataGridViewTextBoxColumn RoomFee;
         private RadioButton RegularRoomSwitch;
         private RadioButton OfficeRoomSwitch;
+        private Label ErrorLabel;
     }
 }
