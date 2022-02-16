@@ -34,6 +34,7 @@ namespace HotelWF.zClasses
         }
         
         public virtual double getFee() { return 99.99; }
+        public virtual string getType() { return "9"; }
             
     }
 }

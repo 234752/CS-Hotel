@@ -14,5 +14,9 @@ namespace HotelWF.zClasses
             if (getNumberOfGuests() != 0) return getNumberOfGuests() * 50 + 100;
             else return 0;
         }
+        public override string getType()
+        {
+            return "Regular";
+        }
     }
 }

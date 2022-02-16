@@ -14,5 +14,9 @@ namespace HotelWF.zClasses
             if (getNumberOfGuests() == 1) return 300;
             else return 0;
         }
+        public override string getType()
+        {
+            return "Office";
+        }
     }
 }
