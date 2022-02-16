@@ -32,11 +32,6 @@
             this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addRoomButton = new System.Windows.Forms.Button();
             this.addRoomNoInput = new System.Windows.Forms.TextBox();
             this.addRoomAreaInput = new System.Windows.Forms.TextBox();
@@ -49,6 +44,12 @@
             this.RegularRoomSwitch = new System.Windows.Forms.RadioButton();
             this.OfficeRoomSwitch = new System.Windows.Forms.RadioButton();
             this.ErrorLabel = new System.Windows.Forms.Label();
+            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             this.RoomGrid.AllowUserToDeleteRows = false;
             this.RoomGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RoomGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RoomType,
             this.RoomNumber,
             this.RoomArea,
             this.RoomMaxGuests,
@@ -91,34 +93,9 @@
             this.RoomGrid.Location = new System.Drawing.Point(60, 151);
             this.RoomGrid.Name = "RoomGrid";
             this.RoomGrid.RowTemplate.Height = 25;
-            this.RoomGrid.Size = new System.Drawing.Size(559, 150);
+            this.RoomGrid.Size = new System.Drawing.Size(655, 150);
             this.RoomGrid.TabIndex = 2;
             this.RoomGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomGrid_CellClick);
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.HeaderText = "No";
-            this.RoomNumber.Name = "RoomNumber";
-            // 
-            // RoomArea
-            // 
-            this.RoomArea.HeaderText = "Area";
-            this.RoomArea.Name = "RoomArea";
-            // 
-            // RoomMaxGuests
-            // 
-            this.RoomMaxGuests.HeaderText = "Max Guests";
-            this.RoomMaxGuests.Name = "RoomMaxGuests";
-            // 
-            // RoomNumberOfGuests
-            // 
-            this.RoomNumberOfGuests.HeaderText = "NumberOfGuests";
-            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
-            // 
-            // RoomFee
-            // 
-            this.RoomFee.HeaderText = "Fee";
-            this.RoomFee.Name = "RoomFee";
             // 
             // addRoomButton
             // 
@@ -177,7 +154,7 @@
             // 
             // displayGuestsButton
             // 
-            this.displayGuestsButton.Location = new System.Drawing.Point(684, 207);
+            this.displayGuestsButton.Location = new System.Drawing.Point(781, 209);
             this.displayGuestsButton.Name = "displayGuestsButton";
             this.displayGuestsButton.Size = new System.Drawing.Size(75, 47);
             this.displayGuestsButton.TabIndex = 10;
@@ -226,6 +203,36 @@
             this.ErrorLabel.Size = new System.Drawing.Size(0, 15);
             this.ErrorLabel.TabIndex = 14;
             // 
+            // RoomType
+            // 
+            this.RoomType.HeaderText = "Type";
+            this.RoomType.Name = "RoomType";
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.HeaderText = "No";
+            this.RoomNumber.Name = "RoomNumber";
+            // 
+            // RoomArea
+            // 
+            this.RoomArea.HeaderText = "Area";
+            this.RoomArea.Name = "RoomArea";
+            // 
+            // RoomMaxGuests
+            // 
+            this.RoomMaxGuests.HeaderText = "Max Guests";
+            this.RoomMaxGuests.Name = "RoomMaxGuests";
+            // 
+            // RoomNumberOfGuests
+            // 
+            this.RoomNumberOfGuests.HeaderText = "Guests";
+            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
+            // 
+            // RoomFee
+            // 
+            this.RoomFee.HeaderText = "Fee";
+            this.RoomFee.Name = "RoomFee";
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -269,13 +276,14 @@
         private TextBox addGuestBalanceInput;
         private Button displayGuestsButton;
         private Button removeGuestButton;
+        private RadioButton RegularRoomSwitch;
+        private RadioButton OfficeRoomSwitch;
+        private Label ErrorLabel;
+        private DataGridViewTextBoxColumn RoomType;
         private DataGridViewTextBoxColumn RoomNumber;
         private DataGridViewTextBoxColumn RoomArea;
         private DataGridViewTextBoxColumn RoomMaxGuests;
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
         private DataGridViewTextBoxColumn RoomFee;
-        private RadioButton RegularRoomSwitch;
-        private RadioButton OfficeRoomSwitch;
-        private Label ErrorLabel;
     }
 }
