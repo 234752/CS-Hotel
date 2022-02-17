@@ -114,5 +114,12 @@ namespace HotelWF
             CurrentRoom = MainHotel.RoomList[indexR];
             REFRESH();
         }
+
+        private void deleteRoomButton_Click(object sender, EventArgs e)
+        {
+            if (MainHotel.removeRoom(CurrentRoom)) CurrentRoom = MainHotel.RoomList.First();
+            else throw new Exception();
+            REFRESH();
+        }
     }
 }

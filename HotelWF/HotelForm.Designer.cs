@@ -242,6 +242,7 @@
             this.deleteRoomButton.TabIndex = 15;
             this.deleteRoomButton.Text = "Delete Room";
             this.deleteRoomButton.UseVisualStyleBackColor = true;
+            this.deleteRoomButton.Click += new System.EventHandler(this.deleteRoomButton_Click);
             // 
             // HotelForm
             // 
