@@ -117,8 +117,18 @@ namespace HotelWF
 
         private void deleteRoomButton_Click(object sender, EventArgs e)
         {
-            if (MainHotel.removeRoom(CurrentRoom)) CurrentRoom = MainHotel.RoomList.First();
-            else throw new Exception();
+            try
+            {
+                if (MainHotel.removeRoom(CurrentRoom))
+                {
+                    CurrentRoom = MainHotel.RoomList.First();
+                }
+                else throw new Exception();
+            }catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot delete this room, none was selected";
+            }
+            
             REFRESH();
         }
     }
