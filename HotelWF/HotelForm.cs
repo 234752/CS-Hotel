@@ -11,7 +11,7 @@ namespace HotelWF
             this.RegularRoomSwitch.Checked = true;
         }
         Hotel MainHotel = new Hotel();
-        Room CurrentRoom = new Room(999, 99.99, 9);
+        Room CurrentRoom = new Room(9, 9.9, 9);
 
         public void REFRESH()
         {
@@ -121,7 +121,8 @@ namespace HotelWF
             {
                 if (MainHotel.removeRoom(CurrentRoom))
                 {
-                    CurrentRoom = MainHotel.RoomList.First();
+                    if (MainHotel.getRoomCount() > 0) CurrentRoom = MainHotel.RoomList.First();
+                    else CurrentRoom = new Room(9, 9.9, 9);
                 }
                 else throw new Exception();
             }catch (Exception ex)
