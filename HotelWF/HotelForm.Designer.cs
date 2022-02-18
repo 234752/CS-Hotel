@@ -53,6 +53,8 @@
             this.deleteRoomButton = new System.Windows.Forms.Button();
             this.revenueLabel = new System.Windows.Forms.Label();
             this.costsLabel = new System.Windows.Forms.Label();
+            this.countRevenueButton = new System.Windows.Forms.Button();
+            this.countCostsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -264,11 +266,31 @@
             this.costsLabel.TabIndex = 17;
             this.costsLabel.Text = "label1";
             // 
+            // countRevenueButton
+            // 
+            this.countRevenueButton.Location = new System.Drawing.Point(803, 394);
+            this.countRevenueButton.Name = "countRevenueButton";
+            this.countRevenueButton.Size = new System.Drawing.Size(75, 23);
+            this.countRevenueButton.TabIndex = 18;
+            this.countRevenueButton.Text = "Revenue";
+            this.countRevenueButton.UseVisualStyleBackColor = true;
+            // 
+            // countCostsButton
+            // 
+            this.countCostsButton.Location = new System.Drawing.Point(803, 447);
+            this.countCostsButton.Name = "countCostsButton";
+            this.countCostsButton.Size = new System.Drawing.Size(75, 23);
+            this.countCostsButton.TabIndex = 19;
+            this.countCostsButton.Text = "Costs";
+            this.countCostsButton.UseVisualStyleBackColor = true;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.countCostsButton);
+            this.Controls.Add(this.countRevenueButton);
             this.Controls.Add(this.costsLabel);
             this.Controls.Add(this.revenueLabel);
             this.Controls.Add(this.deleteRoomButton);
@@ -322,5 +344,7 @@
         private Button deleteRoomButton;
         private Label revenueLabel;
         private Label costsLabel;
+        private Button countRevenueButton;
+        private Button countCostsButton;
     }
 }
