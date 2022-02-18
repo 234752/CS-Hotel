@@ -67,7 +67,7 @@
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
             this.GuestBalance});
-            this.GuestGrid.Location = new System.Drawing.Point(60, 398);
+            this.GuestGrid.Location = new System.Drawing.Point(60, 327);
             this.GuestGrid.Name = "GuestGrid";
             this.GuestGrid.RowTemplate.Height = 25;
             this.GuestGrid.Size = new System.Drawing.Size(247, 242);
@@ -95,7 +95,7 @@
             this.RoomMaxGuests,
             this.RoomNumberOfGuests,
             this.RoomFee});
-            this.RoomGrid.Location = new System.Drawing.Point(60, 151);
+            this.RoomGrid.Location = new System.Drawing.Point(60, 56);
             this.RoomGrid.Name = "RoomGrid";
             this.RoomGrid.RowTemplate.Height = 25;
             this.RoomGrid.Size = new System.Drawing.Size(655, 150);
@@ -134,7 +134,7 @@
             // 
             // addRoomButton
             // 
-            this.addRoomButton.Location = new System.Drawing.Point(430, 93);
+            this.addRoomButton.Location = new System.Drawing.Point(640, 222);
             this.addRoomButton.Name = "addRoomButton";
             this.addRoomButton.Size = new System.Drawing.Size(75, 23);
             this.addRoomButton.TabIndex = 3;
@@ -144,28 +144,28 @@
             // 
             // addRoomNoInput
             // 
-            this.addRoomNoInput.Location = new System.Drawing.Point(110, 93);
+            this.addRoomNoInput.Location = new System.Drawing.Point(227, 222);
             this.addRoomNoInput.Name = "addRoomNoInput";
             this.addRoomNoInput.Size = new System.Drawing.Size(67, 23);
             this.addRoomNoInput.TabIndex = 4;
             // 
             // addRoomAreaInput
             // 
-            this.addRoomAreaInput.Location = new System.Drawing.Point(207, 93);
+            this.addRoomAreaInput.Location = new System.Drawing.Point(321, 222);
             this.addRoomAreaInput.Name = "addRoomAreaInput";
             this.addRoomAreaInput.Size = new System.Drawing.Size(70, 23);
             this.addRoomAreaInput.TabIndex = 5;
             // 
             // addRoomMaxGuestsInput
             // 
-            this.addRoomMaxGuestsInput.Location = new System.Drawing.Point(311, 93);
+            this.addRoomMaxGuestsInput.Location = new System.Drawing.Point(411, 222);
             this.addRoomMaxGuestsInput.Name = "addRoomMaxGuestsInput";
             this.addRoomMaxGuestsInput.Size = new System.Drawing.Size(74, 23);
             this.addRoomMaxGuestsInput.TabIndex = 6;
             // 
             // addGuestButton
             // 
-            this.addGuestButton.Location = new System.Drawing.Point(334, 362);
+            this.addGuestButton.Location = new System.Drawing.Point(335, 588);
             this.addGuestButton.Name = "addGuestButton";
             this.addGuestButton.Size = new System.Drawing.Size(75, 23);
             this.addGuestButton.TabIndex = 7;
@@ -175,21 +175,21 @@
             // 
             // addGuestNameInput
             // 
-            this.addGuestNameInput.Location = new System.Drawing.Point(105, 362);
+            this.addGuestNameInput.Location = new System.Drawing.Point(134, 589);
             this.addGuestNameInput.Name = "addGuestNameInput";
             this.addGuestNameInput.Size = new System.Drawing.Size(72, 23);
             this.addGuestNameInput.TabIndex = 8;
             // 
             // addGuestBalanceInput
             // 
-            this.addGuestBalanceInput.Location = new System.Drawing.Point(207, 362);
+            this.addGuestBalanceInput.Location = new System.Drawing.Point(227, 589);
             this.addGuestBalanceInput.Name = "addGuestBalanceInput";
             this.addGuestBalanceInput.Size = new System.Drawing.Size(70, 23);
             this.addGuestBalanceInput.TabIndex = 9;
             // 
             // displayGuestsButton
             // 
-            this.displayGuestsButton.Location = new System.Drawing.Point(781, 209);
+            this.displayGuestsButton.Location = new System.Drawing.Point(745, 159);
             this.displayGuestsButton.Name = "displayGuestsButton";
             this.displayGuestsButton.Size = new System.Drawing.Size(75, 47);
             this.displayGuestsButton.TabIndex = 10;
@@ -199,7 +199,7 @@
             // 
             // removeGuestButton
             // 
-            this.removeGuestButton.Location = new System.Drawing.Point(366, 472);
+            this.removeGuestButton.Location = new System.Drawing.Point(335, 523);
             this.removeGuestButton.Name = "removeGuestButton";
             this.removeGuestButton.Size = new System.Drawing.Size(75, 46);
             this.removeGuestButton.TabIndex = 11;
@@ -210,7 +210,7 @@
             // RegularRoomSwitch
             // 
             this.RegularRoomSwitch.AutoSize = true;
-            this.RegularRoomSwitch.Location = new System.Drawing.Point(548, 76);
+            this.RegularRoomSwitch.Location = new System.Drawing.Point(520, 212);
             this.RegularRoomSwitch.Name = "RegularRoomSwitch";
             this.RegularRoomSwitch.Size = new System.Drawing.Size(100, 19);
             this.RegularRoomSwitch.TabIndex = 12;
@@ -221,7 +221,7 @@
             // OfficeRoomSwitch
             // 
             this.OfficeRoomSwitch.AutoSize = true;
-            this.OfficeRoomSwitch.Location = new System.Drawing.Point(548, 113);
+            this.OfficeRoomSwitch.Location = new System.Drawing.Point(520, 237);
             this.OfficeRoomSwitch.Name = "OfficeRoomSwitch";
             this.OfficeRoomSwitch.Size = new System.Drawing.Size(92, 19);
             this.OfficeRoomSwitch.TabIndex = 13;
@@ -240,7 +240,7 @@
             // 
             // deleteRoomButton
             // 
-            this.deleteRoomButton.Location = new System.Drawing.Point(781, 151);
+            this.deleteRoomButton.Location = new System.Drawing.Point(745, 91);
             this.deleteRoomButton.Name = "deleteRoomButton";
             this.deleteRoomButton.Size = new System.Drawing.Size(75, 52);
             this.deleteRoomButton.TabIndex = 15;
@@ -251,7 +251,7 @@
             // revenueLabel
             // 
             this.revenueLabel.AutoSize = true;
-            this.revenueLabel.Location = new System.Drawing.Point(895, 398);
+            this.revenueLabel.Location = new System.Drawing.Point(1084, 60);
             this.revenueLabel.Name = "revenueLabel";
             this.revenueLabel.Size = new System.Drawing.Size(38, 15);
             this.revenueLabel.TabIndex = 16;
@@ -260,7 +260,7 @@
             // costsLabel
             // 
             this.costsLabel.AutoSize = true;
-            this.costsLabel.Location = new System.Drawing.Point(895, 451);
+            this.costsLabel.Location = new System.Drawing.Point(1084, 95);
             this.costsLabel.Name = "costsLabel";
             this.costsLabel.Size = new System.Drawing.Size(38, 15);
             this.costsLabel.TabIndex = 17;
@@ -268,7 +268,7 @@
             // 
             // countRevenueButton
             // 
-            this.countRevenueButton.Location = new System.Drawing.Point(803, 394);
+            this.countRevenueButton.Location = new System.Drawing.Point(984, 56);
             this.countRevenueButton.Name = "countRevenueButton";
             this.countRevenueButton.Size = new System.Drawing.Size(75, 23);
             this.countRevenueButton.TabIndex = 18;
@@ -278,7 +278,7 @@
             // 
             // countCostsButton
             // 
-            this.countCostsButton.Location = new System.Drawing.Point(803, 447);
+            this.countCostsButton.Location = new System.Drawing.Point(984, 91);
             this.countCostsButton.Name = "countCostsButton";
             this.countCostsButton.Size = new System.Drawing.Size(75, 23);
             this.countCostsButton.TabIndex = 19;
