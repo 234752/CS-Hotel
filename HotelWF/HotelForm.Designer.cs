@@ -51,6 +51,8 @@
             this.OfficeRoomSwitch = new System.Windows.Forms.RadioButton();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.deleteRoomButton = new System.Windows.Forms.Button();
+            this.revenueLabel = new System.Windows.Forms.Label();
+            this.costsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -244,11 +246,31 @@
             this.deleteRoomButton.UseVisualStyleBackColor = true;
             this.deleteRoomButton.Click += new System.EventHandler(this.deleteRoomButton_Click);
             // 
+            // revenueLabel
+            // 
+            this.revenueLabel.AutoSize = true;
+            this.revenueLabel.Location = new System.Drawing.Point(895, 398);
+            this.revenueLabel.Name = "revenueLabel";
+            this.revenueLabel.Size = new System.Drawing.Size(38, 15);
+            this.revenueLabel.TabIndex = 16;
+            this.revenueLabel.Text = "label1";
+            // 
+            // costsLabel
+            // 
+            this.costsLabel.AutoSize = true;
+            this.costsLabel.Location = new System.Drawing.Point(895, 451);
+            this.costsLabel.Name = "costsLabel";
+            this.costsLabel.Size = new System.Drawing.Size(38, 15);
+            this.costsLabel.TabIndex = 17;
+            this.costsLabel.Text = "label1";
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.costsLabel);
+            this.Controls.Add(this.revenueLabel);
             this.Controls.Add(this.deleteRoomButton);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.OfficeRoomSwitch);
@@ -298,5 +320,7 @@
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
         private DataGridViewTextBoxColumn RoomFee;
         private Button deleteRoomButton;
+        private Label revenueLabel;
+        private Label costsLabel;
     }
 }
