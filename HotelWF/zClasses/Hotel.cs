@@ -28,5 +28,14 @@ namespace HotelWF.zClasses
             }
             return R;
         }
+        public double countCosts()
+        {
+            double C = 0.0;
+            for(int i=0; i < RoomList.Count;i++)
+            {
+                C += RoomList[i].getArea() * 5;
+            }
+            return C;
+        }
     }
 }
