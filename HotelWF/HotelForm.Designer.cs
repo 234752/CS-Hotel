@@ -284,6 +284,7 @@
             this.countCostsButton.TabIndex = 19;
             this.countCostsButton.Text = "Costs";
             this.countCostsButton.UseVisualStyleBackColor = true;
+            this.countCostsButton.Click += new System.EventHandler(this.countCostsButton_Click);
             // 
             // HotelForm
             // 

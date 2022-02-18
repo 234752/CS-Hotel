@@ -137,5 +137,10 @@ namespace HotelWF
         {
             this.revenueLabel.Text = "Total revenue: "+MainHotel.countRevenue().ToString();
         }
+
+        private void countCostsButton_Click(object sender, EventArgs e)
+        {
+            this.costsLabel.Text = "Total costs: " + MainHotel.countCosts().ToString();
+        }
     }
 }
