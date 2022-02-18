@@ -132,5 +132,10 @@ namespace HotelWF
             
             REFRESH();
         }
+
+        private void countRevenueButton_Click(object sender, EventArgs e)
+        {
+            this.revenueLabel.Text = "Total revenue: "+MainHotel.countRevenue().ToString();
+        }
     }
 }

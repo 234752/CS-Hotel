@@ -274,6 +274,7 @@
             this.countRevenueButton.TabIndex = 18;
             this.countRevenueButton.Text = "Revenue";
             this.countRevenueButton.UseVisualStyleBackColor = true;
+            this.countRevenueButton.Click += new System.EventHandler(this.countRevenueButton_Click);
             // 
             // countCostsButton
             // 
