@@ -19,5 +19,14 @@ namespace HotelWF.zClasses
             if (RoomList.Remove(R)) return true;
             return false;
         }
+        public double countRevenue()
+        {
+            double R = 0.0;
+            for(int i = 0;i < RoomList.Count;i++)
+            {
+                R+=RoomList[i].getFee();
+            }
+            return R;
+        }
     }
 }
