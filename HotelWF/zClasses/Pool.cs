@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HotelWF.zClasses
 {
-    internal class Pool
+    internal class Pool : Access
     {
+        public Pool() : base(40) { }
     }
 }
