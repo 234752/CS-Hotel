@@ -10,6 +10,11 @@ namespace HotelWF.zClasses
     {
         private double Price;
         public Access(double p0) { Price = p0; }
+        public Access(bool statement0, double ifTrue, double ifFalse) 
+        {
+            if(statement0) { Price = ifTrue; }
+            else { Price = ifFalse; }
+        }
         public virtual double getPrice() { return Price; }
     }
 }
