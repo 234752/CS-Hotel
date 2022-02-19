@@ -9,6 +9,7 @@ namespace HotelWF.zClasses
     internal class Access
     {
         private double Price;
-        public Access() { Price = 9; }
+        public Access(double p0) { Price = p0; }
+        public virtual double getPrice() { return Price; }
     }
 }
