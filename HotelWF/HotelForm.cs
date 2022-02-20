@@ -24,9 +24,16 @@ namespace HotelWF
 
             if (MainHotel.getRoomCount() != 0)
             {
-                int currentIndex = MainHotel.RoomList.IndexOf(CurrentRoom);
-                this.RoomGrid.CurrentCell = this.RoomGrid.Rows[currentIndex].Cells[0];
-                this.RoomGrid.Rows[currentIndex].Selected = true;
+                int currentIndexR = MainHotel.RoomList.IndexOf(CurrentRoom);
+                this.RoomGrid.CurrentCell = this.RoomGrid.Rows[currentIndexR].Cells[0];
+                this.RoomGrid.Rows[currentIndexR].Selected = true;
+            }
+
+            if (CurrentRoom.getNumberOfGuests() != 0)
+            {
+                int currentIndexG = CurrentRoom.Guests.IndexOf(CurrentGuest);
+                this.GuestGrid.CurrentCell = this.GuestGrid.Rows[currentIndexG].Cells[0];
+                this.GuestGrid.Rows[currentIndexG].Selected = true;
             }
             this.ErrorLabel.Text = "";
         }
@@ -66,7 +73,11 @@ namespace HotelWF
                 if(b0<0.0 || n0=="") throw new Exception();
 
                 if(!CurrentRoom.addGuest(new Guest(n0, b0))) this.ErrorLabel.Text = "Cannot add this guest, room is full";
-                else REFRESH();
+                else
+                {
+                    CurrentGuest = CurrentRoom.Guests.Last();
+                    REFRESH();
+                }
             }
             catch (Exception ex)
             {

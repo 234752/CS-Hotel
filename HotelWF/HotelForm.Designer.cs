@@ -78,7 +78,7 @@
             this.GuestGrid.RowTemplate.Height = 25;
             this.GuestGrid.Size = new System.Drawing.Size(247, 242);
             this.GuestGrid.TabIndex = 0;
-            this.GuestGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestGrid_CellClick);
+            this.GuestGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestGrid_CellClick);
             // 
             // GuestName
             // 
