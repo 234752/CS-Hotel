@@ -32,7 +32,10 @@ namespace HotelWF.zClasses
                 return true;
             }else return false;
         }
-        
+        public bool removeGuest(Guest G)
+        {
+            return Guests.Remove(G);
+        }
         public virtual double getFee() { return 99.99; }
         public virtual string getType() { return "9"; }
             
