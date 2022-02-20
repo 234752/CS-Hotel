@@ -302,6 +302,7 @@
             this.PoolCheckbox.TabIndex = 20;
             this.PoolCheckbox.Text = "Pool Access";
             this.PoolCheckbox.UseVisualStyleBackColor = true;
+            this.PoolCheckbox.CheckedChanged += new System.EventHandler(this.PoolCheckbox_CheckedChanged);
             // 
             // ParkingLotCheckbox
             // 

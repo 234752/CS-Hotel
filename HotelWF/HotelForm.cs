@@ -179,5 +179,11 @@ namespace HotelWF
             CurrentGuest = CurrentRoom.Guests[indexG];
             REFRESH();
         }
+
+        private void PoolCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.PoolCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 1);
+            else GuestFunctions.removeAccess(CurrentGuest,1);
+        }
     }
 }
