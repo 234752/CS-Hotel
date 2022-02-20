@@ -107,17 +107,17 @@ namespace HotelWF
         {
             try
             {
-                if(this.GuestGrid.CurrentCell == null) throw new Exception();
-                else
+                if (CurrentRoom.removeGuest(CurrentGuest))
                 {
-                    int indexG = this.GuestGrid.CurrentCell.RowIndex;
-                    CurrentRoom.Guests.RemoveAt(indexG);
+                    if (CurrentRoom.getNumberOfGuests() > 0) CurrentGuest = CurrentRoom.Guests.First();
+                    else CurrentGuest = new Guest("9", 9.9);
+                    REFRESH();
                 }
-                REFRESH();
+                else throw new Exception();
             }
             catch (Exception ex)
             {
-                this.ErrorLabel.Text = "Cannot delete this guest, none was selected";
+                this.ErrorLabel.Text = "Cannot remove this guest, nobody was selected";
             }
         }
 
@@ -136,14 +136,13 @@ namespace HotelWF
                 {
                     if (MainHotel.getRoomCount() > 0) CurrentRoom = MainHotel.RoomList.First();
                     else CurrentRoom = new Room(9, 9.9, 9);
+                    REFRESH();
                 }
                 else throw new Exception();
             }catch (Exception ex)
             {
                 this.ErrorLabel.Text = "Cannot delete this room, none was selected";
             }
-            
-            REFRESH();
         }
 
         private void countRevenueButton_Click(object sender, EventArgs e)
