@@ -329,8 +329,8 @@
             // AccessPanel
             // 
             this.AccessPanel.Controls.Add(this.PoolCheckbox);
-            this.AccessPanel.Controls.Add(this.UParkingLotCheckbox);
             this.AccessPanel.Controls.Add(this.ParkingLotCheckbox);
+            this.AccessPanel.Controls.Add(this.UParkingLotCheckbox);
             this.AccessPanel.Location = new System.Drawing.Point(500, 390);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(200, 100);
