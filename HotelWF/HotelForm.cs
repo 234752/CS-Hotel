@@ -142,5 +142,10 @@ namespace HotelWF
         {
             this.costsLabel.Text = "Total costs: " + MainHotel.countCosts().ToString();
         }
+
+        private void displayAccessButton_Click(object sender, EventArgs e)
+        {
+            GuestFunctions.displayAccess(MainHotel, AccessPanel, new Guest("ss",44));
+        }
     }
 }

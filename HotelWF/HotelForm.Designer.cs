@@ -340,6 +340,7 @@
             this.displayAccessButton.TabIndex = 24;
             this.displayAccessButton.Text = "Display Access";
             this.displayAccessButton.UseVisualStyleBackColor = true;
+            this.displayAccessButton.Click += new System.EventHandler(this.displayAccessButton_Click);
             // 
             // HotelForm
             // 
