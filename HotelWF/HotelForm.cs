@@ -162,5 +162,12 @@ namespace HotelWF
                 this.ErrorLabel.Text = "Cannot display access list, guest not selected";
             }
         }
+
+        private void GuestGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexG = this.GuestGrid.CurrentCell.RowIndex;
+            CurrentGuest = CurrentRoom.Guests[indexG];
+            REFRESH();
+        }
     }
 }
