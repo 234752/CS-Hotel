@@ -55,6 +55,9 @@
             this.costsLabel = new System.Windows.Forms.Label();
             this.countRevenueButton = new System.Windows.Forms.Button();
             this.countCostsButton = new System.Windows.Forms.Button();
+            this.PoolCheckbox = new System.Windows.Forms.CheckBox();
+            this.ParkingLotCheckbox = new System.Windows.Forms.CheckBox();
+            this.UParkingLotCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.SuspendLayout();
@@ -286,11 +289,44 @@
             this.countCostsButton.UseVisualStyleBackColor = true;
             this.countCostsButton.Click += new System.EventHandler(this.countCostsButton_Click);
             // 
+            // PoolCheckbox
+            // 
+            this.PoolCheckbox.AutoSize = true;
+            this.PoolCheckbox.Location = new System.Drawing.Point(589, 416);
+            this.PoolCheckbox.Name = "PoolCheckbox";
+            this.PoolCheckbox.Size = new System.Drawing.Size(89, 19);
+            this.PoolCheckbox.TabIndex = 20;
+            this.PoolCheckbox.Text = "Pool Access";
+            this.PoolCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // ParkingLotCheckbox
+            // 
+            this.ParkingLotCheckbox.AutoSize = true;
+            this.ParkingLotCheckbox.Location = new System.Drawing.Point(589, 441);
+            this.ParkingLotCheckbox.Name = "ParkingLotCheckbox";
+            this.ParkingLotCheckbox.Size = new System.Drawing.Size(105, 19);
+            this.ParkingLotCheckbox.TabIndex = 21;
+            this.ParkingLotCheckbox.Text = "Parking Access";
+            this.ParkingLotCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // UParkingLotCheckbox
+            // 
+            this.UParkingLotCheckbox.AutoSize = true;
+            this.UParkingLotCheckbox.Location = new System.Drawing.Point(589, 466);
+            this.UParkingLotCheckbox.Name = "UParkingLotCheckbox";
+            this.UParkingLotCheckbox.Size = new System.Drawing.Size(179, 19);
+            this.UParkingLotCheckbox.TabIndex = 22;
+            this.UParkingLotCheckbox.Text = "Underground Parking Access";
+            this.UParkingLotCheckbox.UseVisualStyleBackColor = true;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.UParkingLotCheckbox);
+            this.Controls.Add(this.ParkingLotCheckbox);
+            this.Controls.Add(this.PoolCheckbox);
             this.Controls.Add(this.countCostsButton);
             this.Controls.Add(this.countRevenueButton);
             this.Controls.Add(this.costsLabel);
@@ -348,5 +384,8 @@
         private Label costsLabel;
         private Button countRevenueButton;
         private Button countCostsButton;
+        private CheckBox PoolCheckbox;
+        private CheckBox ParkingLotCheckbox;
+        private CheckBox UParkingLotCheckbox;
     }
 }
