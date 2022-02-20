@@ -19,5 +19,9 @@ namespace HotelWF.zFunctions
                 DGV.Rows[i].Cells[1].Value = R.Guests[i].getBalance();
             }
         }
+        public static void displayAccess(Hotel H, Panel P, Guest G)
+        {
+
+        }
     }
 }

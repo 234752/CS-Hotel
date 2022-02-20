@@ -58,8 +58,11 @@
             this.PoolCheckbox = new System.Windows.Forms.CheckBox();
             this.ParkingLotCheckbox = new System.Windows.Forms.CheckBox();
             this.UParkingLotCheckbox = new System.Windows.Forms.CheckBox();
+            this.AccessPanel = new System.Windows.Forms.Panel();
+            this.displayAccessButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
+            this.AccessPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // GuestGrid
@@ -292,7 +295,7 @@
             // PoolCheckbox
             // 
             this.PoolCheckbox.AutoSize = true;
-            this.PoolCheckbox.Location = new System.Drawing.Point(589, 416);
+            this.PoolCheckbox.Location = new System.Drawing.Point(3, 12);
             this.PoolCheckbox.Name = "PoolCheckbox";
             this.PoolCheckbox.Size = new System.Drawing.Size(89, 19);
             this.PoolCheckbox.TabIndex = 20;
@@ -302,7 +305,7 @@
             // ParkingLotCheckbox
             // 
             this.ParkingLotCheckbox.AutoSize = true;
-            this.ParkingLotCheckbox.Location = new System.Drawing.Point(589, 441);
+            this.ParkingLotCheckbox.Location = new System.Drawing.Point(3, 37);
             this.ParkingLotCheckbox.Name = "ParkingLotCheckbox";
             this.ParkingLotCheckbox.Size = new System.Drawing.Size(105, 19);
             this.ParkingLotCheckbox.TabIndex = 21;
@@ -312,21 +315,39 @@
             // UParkingLotCheckbox
             // 
             this.UParkingLotCheckbox.AutoSize = true;
-            this.UParkingLotCheckbox.Location = new System.Drawing.Point(589, 466);
+            this.UParkingLotCheckbox.Location = new System.Drawing.Point(3, 62);
             this.UParkingLotCheckbox.Name = "UParkingLotCheckbox";
             this.UParkingLotCheckbox.Size = new System.Drawing.Size(179, 19);
             this.UParkingLotCheckbox.TabIndex = 22;
             this.UParkingLotCheckbox.Text = "Underground Parking Access";
             this.UParkingLotCheckbox.UseVisualStyleBackColor = true;
             // 
+            // AccessPanel
+            // 
+            this.AccessPanel.Controls.Add(this.PoolCheckbox);
+            this.AccessPanel.Controls.Add(this.UParkingLotCheckbox);
+            this.AccessPanel.Controls.Add(this.ParkingLotCheckbox);
+            this.AccessPanel.Location = new System.Drawing.Point(500, 390);
+            this.AccessPanel.Name = "AccessPanel";
+            this.AccessPanel.Size = new System.Drawing.Size(200, 100);
+            this.AccessPanel.TabIndex = 23;
+            // 
+            // displayAccessButton
+            // 
+            this.displayAccessButton.Location = new System.Drawing.Point(745, 414);
+            this.displayAccessButton.Name = "displayAccessButton";
+            this.displayAccessButton.Size = new System.Drawing.Size(75, 43);
+            this.displayAccessButton.TabIndex = 24;
+            this.displayAccessButton.Text = "Display Access";
+            this.displayAccessButton.UseVisualStyleBackColor = true;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
-            this.Controls.Add(this.UParkingLotCheckbox);
-            this.Controls.Add(this.ParkingLotCheckbox);
-            this.Controls.Add(this.PoolCheckbox);
+            this.Controls.Add(this.displayAccessButton);
+            this.Controls.Add(this.AccessPanel);
             this.Controls.Add(this.countCostsButton);
             this.Controls.Add(this.countRevenueButton);
             this.Controls.Add(this.costsLabel);
@@ -350,6 +371,8 @@
             this.Text = "HOTEL DATABASE";
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).EndInit();
+            this.AccessPanel.ResumeLayout(false);
+            this.AccessPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +410,7 @@
         private CheckBox PoolCheckbox;
         private CheckBox ParkingLotCheckbox;
         private CheckBox UParkingLotCheckbox;
+        private Panel AccessPanel;
+        private Button displayAccessButton;
     }
 }
