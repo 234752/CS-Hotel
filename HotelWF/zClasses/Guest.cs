@@ -28,5 +28,9 @@ namespace HotelWF.zClasses
         {
             accesses[index0] = A;
         }
+        public void removeAccess(int index0)
+        {
+            accesses[index0] = null;
+        }
     }
 }
