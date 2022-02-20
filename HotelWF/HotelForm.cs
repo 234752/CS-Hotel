@@ -196,7 +196,7 @@ namespace HotelWF
 
         private void UParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.ParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 2);
+            if (this.UParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 2);
             //else GuestFunctions.removeAccess(CurrentGuest,2);
             REFRESH();
         }
