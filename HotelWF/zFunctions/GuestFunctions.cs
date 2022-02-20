@@ -24,11 +24,11 @@ namespace HotelWF.zFunctions
             int i = 0;
             foreach(Control control in P.Controls)
             {
+                CheckBox CB = (CheckBox)control;
                 if (G.accesses[i] != null)
                 {
-                    CheckBox CB = (CheckBox)control;
                     CB.Checked = true;
-                }
+                }else CB.Checked= false;
                 i++;
             }
         }
