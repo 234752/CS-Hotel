@@ -12,11 +12,13 @@ namespace HotelWF
         }
         Hotel MainHotel = new Hotel();
         Room CurrentRoom = new Room(9, 9.9, 9);
+        Guest CurrentGuest = new Guest("9", 9.9);
 
         public void REFRESH()
         {
             RoomFunctions.displayRooms(MainHotel, RoomGrid);
             GuestFunctions.displayGuests(MainHotel, GuestGrid, CurrentRoom);
+            GuestFunctions.displayAccess(MainHotel, AccessPanel, CurrentGuest);
 
             this.GuestGrid.CurrentCell = null;
 
@@ -145,7 +147,20 @@ namespace HotelWF
 
         private void displayAccessButton_Click(object sender, EventArgs e)
         {
-            GuestFunctions.displayAccess(MainHotel, AccessPanel, new Guest("ss",44));
+            try
+            {
+                if (this.GuestGrid.CurrentCell == null) throw new Exception();
+                else
+                {
+                    int indexG = this.GuestGrid.CurrentCell.RowIndex;
+                    CurrentGuest = CurrentRoom.Guests[indexG];
+                }
+                REFRESH();
+            }
+            catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot display access list, guest not selected";
+            }
         }
     }
 }

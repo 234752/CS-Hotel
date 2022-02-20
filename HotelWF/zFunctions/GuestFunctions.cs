@@ -22,11 +22,9 @@ namespace HotelWF.zFunctions
         public static void displayAccess(Hotel H, Panel P, Guest G)
         {
             int i = 0;
-            Guest guest = new Guest("bb", 500);
-            guest.addAccess(new Pool(), 1);
             foreach(Control control in P.Controls)
             {
-                if (guest.accesses[i] != null)
+                if (G.accesses[i] != null)
                 {
                     CheckBox CB = (CheckBox)control;
                     CB.Checked = true;
