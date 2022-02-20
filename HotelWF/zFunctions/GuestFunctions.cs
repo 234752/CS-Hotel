@@ -32,5 +32,25 @@ namespace HotelWF.zFunctions
                 i++;
             }
         }
+
+        public static void giveAccess(Guest G, int index0)
+        {
+            switch(index0)
+            {
+                case 1:
+                    G.addAccess(new Pool(),0);
+                    break;
+                case 2:
+                    G.addAccess(new ParkingLot(false),1);
+                    break;
+
+                case 3:
+                    G.addAccess(new ParkingLot(true),2);
+                    break;
+                default:
+                    break;
+            }
+                
+        }
     }
 }
