@@ -313,6 +313,7 @@
             this.ParkingLotCheckbox.TabIndex = 21;
             this.ParkingLotCheckbox.Text = "Parking Access";
             this.ParkingLotCheckbox.UseVisualStyleBackColor = true;
+            this.ParkingLotCheckbox.CheckedChanged += new System.EventHandler(this.ParkingLotCheckbox_CheckedChanged);
             // 
             // UParkingLotCheckbox
             // 

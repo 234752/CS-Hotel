@@ -28,7 +28,7 @@ namespace HotelWF.zFunctions
                 if (G.accesses[i] != null)
                 {
                     CB.Checked = true;
-                }else CB.Checked= false;
+                }else CB.Checked = false;
                 i++;
             }
         }
@@ -37,14 +37,13 @@ namespace HotelWF.zFunctions
         {
             switch(index0)
             {
-                case 1:
+                case 0:
                     G.addAccess(new Pool(),0);
                     break;
-                case 2:
+                case 1:
                     G.addAccess(new ParkingLot(false),1);
                     break;
-
-                case 3:
+                case 2:
                     G.addAccess(new ParkingLot(true),2);
                     break;
                 default:
