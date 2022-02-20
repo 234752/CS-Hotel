@@ -324,6 +324,7 @@
             this.UParkingLotCheckbox.TabIndex = 22;
             this.UParkingLotCheckbox.Text = "Underground Parking Access";
             this.UParkingLotCheckbox.UseVisualStyleBackColor = true;
+            this.UParkingLotCheckbox.CheckedChanged += new System.EventHandler(this.UParkingLotCheckbox_CheckedChanged);
             // 
             // AccessPanel
             // 

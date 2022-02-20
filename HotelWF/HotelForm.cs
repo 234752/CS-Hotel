@@ -193,5 +193,12 @@ namespace HotelWF
             //else GuestFunctions.removeAccess(CurrentGuest,1);
             REFRESH();
         }
+
+        private void UParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.ParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 2);
+            //else GuestFunctions.removeAccess(CurrentGuest,2);
+            REFRESH();
+        }
     }
 }
