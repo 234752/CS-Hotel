@@ -294,7 +294,7 @@
             this.PoolCheckbox.TabIndex = 20;
             this.PoolCheckbox.Text = "Pool Access";
             this.PoolCheckbox.UseVisualStyleBackColor = true;
-            this.PoolCheckbox.CheckedChanged += new System.EventHandler(this.PoolCheckbox_CheckedChanged);
+            this.PoolCheckbox.Click += new System.EventHandler(this.PoolCheckbox_Click);
             // 
             // ParkingLotCheckbox
             // 
@@ -305,7 +305,7 @@
             this.ParkingLotCheckbox.TabIndex = 21;
             this.ParkingLotCheckbox.Text = "Parking Access";
             this.ParkingLotCheckbox.UseVisualStyleBackColor = true;
-            this.ParkingLotCheckbox.CheckedChanged += new System.EventHandler(this.ParkingLotCheckbox_CheckedChanged);
+            this.ParkingLotCheckbox.Click += new System.EventHandler(this.ParkingLotCheckbox_Click);
             // 
             // UParkingLotCheckbox
             // 
@@ -316,7 +316,7 @@
             this.UParkingLotCheckbox.TabIndex = 22;
             this.UParkingLotCheckbox.Text = "Underground Parking Access";
             this.UParkingLotCheckbox.UseVisualStyleBackColor = true;
-            this.UParkingLotCheckbox.CheckedChanged += new System.EventHandler(this.UParkingLotCheckbox_CheckedChanged);
+            this.UParkingLotCheckbox.Click += new System.EventHandler(this.UParkingLotCheckbox_Click);
             // 
             // AccessPanel
             // 

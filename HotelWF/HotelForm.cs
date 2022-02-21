@@ -180,21 +180,29 @@ namespace HotelWF
             REFRESH();
         }
 
-        private void PoolCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void PoolCheckbox_Click(object sender, EventArgs e)
         {
-            if(this.PoolCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 0);
-            else GuestFunctions.revokeAccess(CurrentGuest, 0);
-            REFRESH();
+            try
+            {
+
+                if (this.PoolCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 0);
+                else GuestFunctions.revokeAccess(CurrentGuest, 0);
+                REFRESH();
+            }catch (Exception ex)
+            {
+                this.ErrorLabel.Text = "Cannot add this access, guest with too little balance was selected";
+                this.PoolCheckbox.Checked = false;
+            }
         }
 
-        private void ParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void ParkingLotCheckbox_Click(object sender, EventArgs e)
         {
             if (this.ParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 1);
             else GuestFunctions.revokeAccess(CurrentGuest, 1);
             REFRESH();
         }
 
-        private void UParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void UParkingLotCheckbox_Click(object sender, EventArgs e)
         {
             if (this.UParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 2);
             else GuestFunctions.revokeAccess(CurrentGuest, 2);
