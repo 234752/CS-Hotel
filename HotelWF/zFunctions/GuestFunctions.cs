@@ -47,9 +47,26 @@ namespace HotelWF.zFunctions
                     G.addAccess(new ParkingLot(true),2);
                     break;
                 default:
-                    break;
+                    throw new Exception();
             }
                 
+        }
+        public static void revokeAccess(Guest G, int index0)
+        {
+            switch (index0)
+            {
+                case 0:
+                    G.removeAccess(0);
+                    break;
+                case 1:
+                    G.removeAccess(1);
+                    break;
+                case 2:
+                    G.removeAccess(2);
+                    break;
+                default:
+                    throw new Exception();
+            }
         }
     }
 }
