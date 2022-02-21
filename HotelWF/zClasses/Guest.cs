@@ -35,5 +35,14 @@ namespace HotelWF.zClasses
             this.Balance+=accesses[index0].getPrice();
             accesses[index0] = null;
         }
+        public double countFees()
+        {
+            double F = 0.0;
+            for(int i = 0;i<accesses.Count;i++)
+            {
+                if(accesses[i]!=null) F += accesses[i].getPrice();
+            }
+            return F;
+        }
     }
 }
