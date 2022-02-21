@@ -17,6 +17,7 @@ namespace HotelWF.zFunctions
                 DGV.Rows.Add();
                 DGV.Rows[i].Cells[0].Value = R.Guests[i].getName();
                 DGV.Rows[i].Cells[1].Value = R.Guests[i].getBalance();
+                DGV.Rows[i].Cells[2].Value = R.Guests[i].countFees();
             }
         }
         public static void displayAccess(Hotel H, Panel P, Guest G)
