@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.GuestGrid = new System.Windows.Forms.DataGridView();
-            this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
             this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +58,9 @@
             this.UParkingLotCheckbox = new System.Windows.Forms.CheckBox();
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.displayAccessButton = new System.Windows.Forms.Button();
+            this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.AccessPanel.SuspendLayout();
@@ -72,23 +73,14 @@
             this.GuestGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GuestName,
-            this.GuestBalance});
+            this.GuestBalance,
+            this.GuestFees});
             this.GuestGrid.Location = new System.Drawing.Point(60, 327);
             this.GuestGrid.Name = "GuestGrid";
             this.GuestGrid.RowTemplate.Height = 25;
-            this.GuestGrid.Size = new System.Drawing.Size(247, 242);
+            this.GuestGrid.Size = new System.Drawing.Size(350, 242);
             this.GuestGrid.TabIndex = 0;
             this.GuestGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestGrid_CellClick);
-            // 
-            // GuestName
-            // 
-            this.GuestName.HeaderText = "Name";
-            this.GuestName.Name = "GuestName";
-            // 
-            // GuestBalance
-            // 
-            this.GuestBalance.HeaderText = "Balance";
-            this.GuestBalance.Name = "GuestBalance";
             // 
             // RoomGrid
             // 
@@ -206,7 +198,7 @@
             // 
             // removeGuestButton
             // 
-            this.removeGuestButton.Location = new System.Drawing.Point(335, 523);
+            this.removeGuestButton.Location = new System.Drawing.Point(422, 523);
             this.removeGuestButton.Name = "removeGuestButton";
             this.removeGuestButton.Size = new System.Drawing.Size(75, 46);
             this.removeGuestButton.TabIndex = 11;
@@ -331,20 +323,35 @@
             this.AccessPanel.Controls.Add(this.PoolCheckbox);
             this.AccessPanel.Controls.Add(this.ParkingLotCheckbox);
             this.AccessPanel.Controls.Add(this.UParkingLotCheckbox);
-            this.AccessPanel.Location = new System.Drawing.Point(500, 390);
+            this.AccessPanel.Location = new System.Drawing.Point(422, 327);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(200, 100);
             this.AccessPanel.TabIndex = 23;
             // 
             // displayAccessButton
             // 
-            this.displayAccessButton.Location = new System.Drawing.Point(745, 414);
+            this.displayAccessButton.Location = new System.Drawing.Point(422, 474);
             this.displayAccessButton.Name = "displayAccessButton";
             this.displayAccessButton.Size = new System.Drawing.Size(75, 43);
             this.displayAccessButton.TabIndex = 24;
             this.displayAccessButton.Text = "Display Access";
             this.displayAccessButton.UseVisualStyleBackColor = true;
             this.displayAccessButton.Click += new System.EventHandler(this.displayAccessButton_Click);
+            // 
+            // GuestName
+            // 
+            this.GuestName.HeaderText = "Name";
+            this.GuestName.Name = "GuestName";
+            // 
+            // GuestBalance
+            // 
+            this.GuestBalance.HeaderText = "Balance";
+            this.GuestBalance.Name = "GuestBalance";
+            // 
+            // GuestFees
+            // 
+            this.GuestFees.HeaderText = "Combined Fees";
+            this.GuestFees.Name = "GuestFees";
             // 
             // HotelForm
             // 
@@ -386,8 +393,6 @@
         #endregion
 
         private DataGridView GuestGrid;
-        private DataGridViewTextBoxColumn GuestName;
-        private DataGridViewTextBoxColumn GuestBalance;
         private DataGridView RoomGrid;
         private Button addRoomButton;
         private TextBox addRoomNoInput;
@@ -417,5 +422,8 @@
         private CheckBox UParkingLotCheckbox;
         private Panel AccessPanel;
         private Button displayAccessButton;
+        private DataGridViewTextBoxColumn GuestName;
+        private DataGridViewTextBoxColumn GuestBalance;
+        private DataGridViewTextBoxColumn GuestFees;
     }
 }
