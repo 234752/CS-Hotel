@@ -32,6 +32,7 @@ namespace HotelWF.zClasses
         }
         public void removeAccess(int index0)
         {
+            this.Balance+=accesses[index0].getPrice();
             accesses[index0] = null;
         }
     }
