@@ -26,7 +26,9 @@ namespace HotelWF.zClasses
         }
         public void addAccess(Access A, int index0)
         {
+            if (this.getBalance() < A.getPrice()) throw new Exception();
             accesses[index0] = A;
+            this.Balance-=A.getPrice();
         }
         public void removeAccess(int index0)
         {
