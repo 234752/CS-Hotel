@@ -183,21 +183,21 @@ namespace HotelWF
         private void PoolCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if(this.PoolCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 0);
-            //else GuestFunctions.removeAccess(CurrentGuest,0);
+            else GuestFunctions.revokeAccess(CurrentGuest, 0);
             REFRESH();
         }
 
         private void ParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if (this.ParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 1);
-            //else GuestFunctions.removeAccess(CurrentGuest,1);
+            else GuestFunctions.revokeAccess(CurrentGuest, 1);
             REFRESH();
         }
 
         private void UParkingLotCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if (this.UParkingLotCheckbox.Checked) GuestFunctions.giveAccess(CurrentGuest, 2);
-            //else GuestFunctions.removeAccess(CurrentGuest,2);
+            else GuestFunctions.revokeAccess(CurrentGuest, 2);
             REFRESH();
         }
     }
