@@ -38,6 +38,15 @@ namespace HotelWF.zClasses
         }
         public virtual double getFee() { return 99.99; }
         public virtual string getType() { return "9"; }
+        public double countGuestsFees()
+        {
+            double F = 0.0;
+            for (int i = 0; i < Guests.Count; i++)
+            {
+                F += Guests[i].countFees();
+            }
+            return F;
+        }
             
     }
 }
