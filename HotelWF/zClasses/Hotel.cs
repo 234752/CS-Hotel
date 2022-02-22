@@ -24,7 +24,7 @@ namespace HotelWF.zClasses
             double R = 0.0;
             for(int i = 0;i < RoomList.Count;i++)
             {
-                R+=RoomList[i].getFee();
+                R += RoomList[i].getFee() + RoomList[i].countGuestsFees();
             }
             return R;
         }
