@@ -363,6 +363,7 @@
             this.addBalanceButton.TabIndex = 25;
             this.addBalanceButton.Text = "Add Balance";
             this.addBalanceButton.UseVisualStyleBackColor = true;
+            this.addBalanceButton.Click += new System.EventHandler(this.addBalanceButton_Click);
             // 
             // addBalanceInput
             // 

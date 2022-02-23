@@ -226,5 +226,12 @@ namespace HotelWF
                 this.UParkingLotCheckbox.Checked = false;
             }
         }
+
+        private void addBalanceButton_Click(object sender, EventArgs e)
+        {
+            double B = double.Parse(this.addBalanceInput.Text);
+            CurrentGuest.addBalance(B);
+            REFRESH();
+        }
     }
 }
