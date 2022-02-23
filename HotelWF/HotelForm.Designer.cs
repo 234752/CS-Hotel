@@ -62,6 +62,7 @@
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.displayAccessButton = new System.Windows.Forms.Button();
             this.addBalanceButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.AccessPanel.SuspendLayout();
@@ -363,11 +364,19 @@
             this.addBalanceButton.Text = "Add Balance";
             this.addBalanceButton.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(520, 445);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(70, 23);
+            this.textBox1.TabIndex = 26;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.addBalanceButton);
             this.Controls.Add(this.displayAccessButton);
             this.Controls.Add(this.AccessPanel);
@@ -437,5 +446,6 @@
         private DataGridViewTextBoxColumn GuestBalance;
         private DataGridViewTextBoxColumn GuestFees;
         private Button addBalanceButton;
+        private TextBox textBox1;
     }
 }
