@@ -232,7 +232,7 @@ namespace HotelWF
             try
             {
                 double B = double.Parse(this.addBalanceInput.Text);
-                CurrentGuest.addBalance(B);
+                if (!CurrentGuest.addBalance(B)) throw new Exception();
                 REFRESH();
             }
             catch(Exception ex)
