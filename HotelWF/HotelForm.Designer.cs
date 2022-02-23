@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.GuestGrid = new System.Windows.Forms.DataGridView();
+            this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
             this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +61,7 @@
             this.UParkingLotCheckbox = new System.Windows.Forms.CheckBox();
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.displayAccessButton = new System.Windows.Forms.Button();
-            this.GuestName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuestFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addBalanceButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.AccessPanel.SuspendLayout();
@@ -81,6 +82,21 @@
             this.GuestGrid.Size = new System.Drawing.Size(350, 242);
             this.GuestGrid.TabIndex = 0;
             this.GuestGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestGrid_CellClick);
+            // 
+            // GuestName
+            // 
+            this.GuestName.HeaderText = "Name";
+            this.GuestName.Name = "GuestName";
+            // 
+            // GuestBalance
+            // 
+            this.GuestBalance.HeaderText = "Balance";
+            this.GuestBalance.Name = "GuestBalance";
+            // 
+            // GuestFees
+            // 
+            this.GuestFees.HeaderText = "Combined Fees";
+            this.GuestFees.Name = "GuestFees";
             // 
             // RoomGrid
             // 
@@ -164,7 +180,7 @@
             // 
             // addGuestButton
             // 
-            this.addGuestButton.Location = new System.Drawing.Point(335, 588);
+            this.addGuestButton.Location = new System.Drawing.Point(321, 588);
             this.addGuestButton.Name = "addGuestButton";
             this.addGuestButton.Size = new System.Drawing.Size(75, 23);
             this.addGuestButton.TabIndex = 7;
@@ -188,9 +204,9 @@
             // 
             // displayGuestsButton
             // 
-            this.displayGuestsButton.Location = new System.Drawing.Point(745, 159);
+            this.displayGuestsButton.Location = new System.Drawing.Point(721, 91);
             this.displayGuestsButton.Name = "displayGuestsButton";
-            this.displayGuestsButton.Size = new System.Drawing.Size(75, 47);
+            this.displayGuestsButton.Size = new System.Drawing.Size(97, 23);
             this.displayGuestsButton.TabIndex = 10;
             this.displayGuestsButton.Text = "Display Guests";
             this.displayGuestsButton.UseVisualStyleBackColor = true;
@@ -198,9 +214,9 @@
             // 
             // removeGuestButton
             // 
-            this.removeGuestButton.Location = new System.Drawing.Point(422, 523);
+            this.removeGuestButton.Location = new System.Drawing.Point(422, 503);
             this.removeGuestButton.Name = "removeGuestButton";
-            this.removeGuestButton.Size = new System.Drawing.Size(75, 46);
+            this.removeGuestButton.Size = new System.Drawing.Size(92, 23);
             this.removeGuestButton.TabIndex = 11;
             this.removeGuestButton.Text = "Remove Guest";
             this.removeGuestButton.UseVisualStyleBackColor = true;
@@ -239,9 +255,9 @@
             // 
             // deleteRoomButton
             // 
-            this.deleteRoomButton.Location = new System.Drawing.Point(745, 91);
+            this.deleteRoomButton.Location = new System.Drawing.Point(721, 120);
             this.deleteRoomButton.Name = "deleteRoomButton";
-            this.deleteRoomButton.Size = new System.Drawing.Size(75, 52);
+            this.deleteRoomButton.Size = new System.Drawing.Size(97, 23);
             this.deleteRoomButton.TabIndex = 15;
             this.deleteRoomButton.Text = "Delete Room";
             this.deleteRoomButton.UseVisualStyleBackColor = true;
@@ -332,32 +348,27 @@
             // 
             this.displayAccessButton.Location = new System.Drawing.Point(422, 474);
             this.displayAccessButton.Name = "displayAccessButton";
-            this.displayAccessButton.Size = new System.Drawing.Size(75, 43);
+            this.displayAccessButton.Size = new System.Drawing.Size(92, 23);
             this.displayAccessButton.TabIndex = 24;
             this.displayAccessButton.Text = "Display Access";
             this.displayAccessButton.UseVisualStyleBackColor = true;
             this.displayAccessButton.Click += new System.EventHandler(this.displayAccessButton_Click);
             // 
-            // GuestName
+            // addBalanceButton
             // 
-            this.GuestName.HeaderText = "Name";
-            this.GuestName.Name = "GuestName";
-            // 
-            // GuestBalance
-            // 
-            this.GuestBalance.HeaderText = "Balance";
-            this.GuestBalance.Name = "GuestBalance";
-            // 
-            // GuestFees
-            // 
-            this.GuestFees.HeaderText = "Combined Fees";
-            this.GuestFees.Name = "GuestFees";
+            this.addBalanceButton.Location = new System.Drawing.Point(422, 445);
+            this.addBalanceButton.Name = "addBalanceButton";
+            this.addBalanceButton.Size = new System.Drawing.Size(92, 23);
+            this.addBalanceButton.TabIndex = 25;
+            this.addBalanceButton.Text = "Add Balance";
+            this.addBalanceButton.UseVisualStyleBackColor = true;
             // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.addBalanceButton);
             this.Controls.Add(this.displayAccessButton);
             this.Controls.Add(this.AccessPanel);
             this.Controls.Add(this.countCostsButton);
@@ -425,5 +436,6 @@
         private DataGridViewTextBoxColumn GuestName;
         private DataGridViewTextBoxColumn GuestBalance;
         private DataGridViewTextBoxColumn GuestFees;
+        private Button addBalanceButton;
     }
 }
