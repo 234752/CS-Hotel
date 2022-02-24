@@ -123,6 +123,7 @@ namespace HotelWF
 
         private void RoomGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             int indexR = this.RoomGrid.CurrentCell.RowIndex;
             CurrentRoom = MainHotel.RoomList[indexR];
             REFRESH();
@@ -175,8 +176,9 @@ namespace HotelWF
 
         private void GuestGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             int indexG = this.GuestGrid.CurrentCell.RowIndex;
-            CurrentGuest = CurrentRoom.Guests[indexG];
+            if(indexG>=0) CurrentGuest = CurrentRoom.Guests[indexG];
             REFRESH();
         }
 
