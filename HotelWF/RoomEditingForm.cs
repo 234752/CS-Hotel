@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HotelWF.zClasses;
 
 namespace HotelWF
 {
-    public partial class EditingForm : Form
+    internal partial class RoomEditingForm : Form
     {
-        public EditingForm()
+        public RoomEditingForm(Room R)
         {
             InitializeComponent();
         }

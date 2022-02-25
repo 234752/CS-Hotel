@@ -1,6 +1,6 @@
 ﻿namespace HotelWF
 {
-    partial class EditingForm
+    partial class RoomEditingForm
     {
         /// <summary>
         /// Required designer variable.
