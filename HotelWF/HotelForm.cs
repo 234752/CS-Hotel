@@ -246,6 +246,7 @@ namespace HotelWF
         private void form2Button_Click(object sender, EventArgs e)
         {
             EditingForm editingForm = new EditingForm();
+            editingForm.StartPosition = FormStartPosition.CenterParent;
             editingForm.ShowDialog();
         }
     }
