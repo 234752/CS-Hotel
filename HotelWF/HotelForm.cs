@@ -242,5 +242,11 @@ namespace HotelWF
                 this.ErrorLabel.Text = "Cannot add balance, enter a valid number";
             }
         }
+
+        private void form2Button_Click(object sender, EventArgs e)
+        {
+            EditingForm editingForm = new EditingForm();
+            editingForm.ShowDialog();
+        }
     }
 }

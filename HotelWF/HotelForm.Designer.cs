@@ -33,6 +33,12 @@
             this.GuestBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuestFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomGrid = new System.Windows.Forms.DataGridView();
+            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addRoomButton = new System.Windows.Forms.Button();
             this.addRoomNoInput = new System.Windows.Forms.TextBox();
             this.addRoomAreaInput = new System.Windows.Forms.TextBox();
@@ -57,12 +63,7 @@
             this.displayAccessButton = new System.Windows.Forms.Button();
             this.addBalanceButton = new System.Windows.Forms.Button();
             this.addBalanceInput = new System.Windows.Forms.TextBox();
-            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomMaxGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumberOfGuests = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.form2Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.AccessPanel.SuspendLayout();
@@ -122,6 +123,48 @@
             this.RoomGrid.Size = new System.Drawing.Size(655, 150);
             this.RoomGrid.TabIndex = 2;
             this.RoomGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomGrid_CellClick);
+            // 
+            // RoomType
+            // 
+            this.RoomType.HeaderText = "Type";
+            this.RoomType.Name = "RoomType";
+            this.RoomType.ReadOnly = true;
+            this.RoomType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.HeaderText = "No";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.ReadOnly = true;
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomArea
+            // 
+            this.RoomArea.HeaderText = "Area";
+            this.RoomArea.Name = "RoomArea";
+            this.RoomArea.ReadOnly = true;
+            this.RoomArea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomMaxGuests
+            // 
+            this.RoomMaxGuests.HeaderText = "Max Guests";
+            this.RoomMaxGuests.Name = "RoomMaxGuests";
+            this.RoomMaxGuests.ReadOnly = true;
+            this.RoomMaxGuests.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomNumberOfGuests
+            // 
+            this.RoomNumberOfGuests.HeaderText = "Guests";
+            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
+            this.RoomNumberOfGuests.ReadOnly = true;
+            this.RoomNumberOfGuests.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomFee
+            // 
+            this.RoomFee.HeaderText = "Fee";
+            this.RoomFee.Name = "RoomFee";
+            this.RoomFee.ReadOnly = true;
+            this.RoomFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // addRoomButton
             // 
@@ -347,53 +390,22 @@
             this.addBalanceInput.Size = new System.Drawing.Size(70, 23);
             this.addBalanceInput.TabIndex = 26;
             // 
-            // RoomType
+            // form2Button
             // 
-            this.RoomType.HeaderText = "Type";
-            this.RoomType.Name = "RoomType";
-            this.RoomType.ReadOnly = true;
-            this.RoomType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.HeaderText = "No";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.ReadOnly = true;
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomArea
-            // 
-            this.RoomArea.HeaderText = "Area";
-            this.RoomArea.Name = "RoomArea";
-            this.RoomArea.ReadOnly = true;
-            this.RoomArea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomMaxGuests
-            // 
-            this.RoomMaxGuests.HeaderText = "Max Guests";
-            this.RoomMaxGuests.Name = "RoomMaxGuests";
-            this.RoomMaxGuests.ReadOnly = true;
-            this.RoomMaxGuests.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomNumberOfGuests
-            // 
-            this.RoomNumberOfGuests.HeaderText = "Guests";
-            this.RoomNumberOfGuests.Name = "RoomNumberOfGuests";
-            this.RoomNumberOfGuests.ReadOnly = true;
-            this.RoomNumberOfGuests.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomFee
-            // 
-            this.RoomFee.HeaderText = "Fee";
-            this.RoomFee.Name = "RoomFee";
-            this.RoomFee.ReadOnly = true;
-            this.RoomFee.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.form2Button.Location = new System.Drawing.Point(991, 343);
+            this.form2Button.Name = "form2Button";
+            this.form2Button.Size = new System.Drawing.Size(75, 23);
+            this.form2Button.TabIndex = 27;
+            this.form2Button.Text = "form 2";
+            this.form2Button.UseVisualStyleBackColor = true;
+            this.form2Button.Click += new System.EventHandler(this.form2Button_Click);
             // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
+            this.Controls.Add(this.form2Button);
             this.Controls.Add(this.addBalanceInput);
             this.Controls.Add(this.addBalanceButton);
             this.Controls.Add(this.displayAccessButton);
@@ -465,5 +477,6 @@
         private DataGridViewTextBoxColumn RoomMaxGuests;
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
         private DataGridViewTextBoxColumn RoomFee;
+        private Button form2Button;
     }
 }
