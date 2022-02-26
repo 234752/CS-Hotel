@@ -32,8 +32,8 @@
             this.typeTextBox = new System.Windows.Forms.TextBox();
             this.noTextBox = new System.Windows.Forms.TextBox();
             this.areaTextBox = new System.Windows.Forms.TextBox();
-            this.maxGuestTextBox = new System.Windows.Forms.TextBox();
-            this.guestsTexBox = new System.Windows.Forms.TextBox();
+            this.maxGuestsTextBox = new System.Windows.Forms.TextBox();
+            this.guestsTextBox = new System.Windows.Forms.TextBox();
             this.feeTextBox = new System.Windows.Forms.TextBox();
             this.typeLabel = new System.Windows.Forms.Label();
             this.noLabel = new System.Windows.Forms.Label();
@@ -74,20 +74,20 @@
             this.areaTextBox.Size = new System.Drawing.Size(75, 23);
             this.areaTextBox.TabIndex = 3;
             // 
-            // maxGuestTextBox
+            // maxGuestsTextBox
             // 
-            this.maxGuestTextBox.Location = new System.Drawing.Point(265, 76);
-            this.maxGuestTextBox.Name = "maxGuestTextBox";
-            this.maxGuestTextBox.Size = new System.Drawing.Size(75, 23);
-            this.maxGuestTextBox.TabIndex = 4;
+            this.maxGuestsTextBox.Location = new System.Drawing.Point(265, 76);
+            this.maxGuestsTextBox.Name = "maxGuestsTextBox";
+            this.maxGuestsTextBox.Size = new System.Drawing.Size(75, 23);
+            this.maxGuestsTextBox.TabIndex = 4;
             // 
-            // guestsTexBox
+            // guestsTextBox
             // 
-            this.guestsTexBox.Location = new System.Drawing.Point(346, 76);
-            this.guestsTexBox.Name = "guestsTexBox";
-            this.guestsTexBox.ReadOnly = true;
-            this.guestsTexBox.Size = new System.Drawing.Size(75, 23);
-            this.guestsTexBox.TabIndex = 5;
+            this.guestsTextBox.Location = new System.Drawing.Point(346, 76);
+            this.guestsTextBox.Name = "guestsTextBox";
+            this.guestsTextBox.ReadOnly = true;
+            this.guestsTextBox.Size = new System.Drawing.Size(75, 23);
+            this.guestsTextBox.TabIndex = 5;
             // 
             // feeTextBox
             // 
@@ -163,8 +163,8 @@
             this.Controls.Add(this.noLabel);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.feeTextBox);
-            this.Controls.Add(this.guestsTexBox);
-            this.Controls.Add(this.maxGuestTextBox);
+            this.Controls.Add(this.guestsTextBox);
+            this.Controls.Add(this.maxGuestsTextBox);
             this.Controls.Add(this.areaTextBox);
             this.Controls.Add(this.noTextBox);
             this.Controls.Add(this.typeTextBox);
@@ -182,8 +182,8 @@
         private TextBox typeTextBox;
         private TextBox noTextBox;
         private TextBox areaTextBox;
-        private TextBox maxGuestTextBox;
-        private TextBox guestsTexBox;
+        private TextBox maxGuestsTextBox;
+        private TextBox guestsTextBox;
         private TextBox feeTextBox;
         private Label typeLabel;
         private Label noLabel;

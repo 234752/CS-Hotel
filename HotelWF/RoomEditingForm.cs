@@ -16,6 +16,16 @@ namespace HotelWF
         public RoomEditingForm(Room R)
         {
             InitializeComponent();
+            display(R);
+        }
+        private void display(Room R)
+        {
+            this.typeTextBox.Text = R.getType();
+            this.noTextBox.Text = R.getNumber().ToString();
+            this.areaTextBox.Text = R.getArea().ToString();
+            this.maxGuestsTextBox.Text = R.getMaxGuests().ToString();
+            this.guestsTextBox.Text = R.getNumberOfGuests().ToString();
+            this.feeTextBox.Text = R.getFee().ToString();
         }
     }
 }
