@@ -35,6 +35,12 @@
             this.maxGuestTextBox = new System.Windows.Forms.TextBox();
             this.guestsTexBox = new System.Windows.Forms.TextBox();
             this.feeTextBox = new System.Windows.Forms.TextBox();
+            this.typeLabel = new System.Windows.Forms.Label();
+            this.noLabel = new System.Windows.Forms.Label();
+            this.areaLabel = new System.Windows.Forms.Label();
+            this.maxGuestsLabel = new System.Windows.Forms.Label();
+            this.guestsLabel = new System.Windows.Forms.Label();
+            this.feeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // confirmButton
@@ -91,11 +97,71 @@
             this.feeTextBox.Size = new System.Drawing.Size(75, 23);
             this.feeTextBox.TabIndex = 6;
             // 
+            // typeLabel
+            // 
+            this.typeLabel.AutoSize = true;
+            this.typeLabel.Location = new System.Drawing.Point(22, 58);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(31, 15);
+            this.typeLabel.TabIndex = 7;
+            this.typeLabel.Text = "Type";
+            // 
+            // noLabel
+            // 
+            this.noLabel.AutoSize = true;
+            this.noLabel.Location = new System.Drawing.Point(103, 58);
+            this.noLabel.Name = "noLabel";
+            this.noLabel.Size = new System.Drawing.Size(23, 15);
+            this.noLabel.TabIndex = 8;
+            this.noLabel.Text = "No";
+            // 
+            // areaLabel
+            // 
+            this.areaLabel.AutoSize = true;
+            this.areaLabel.Location = new System.Drawing.Point(184, 58);
+            this.areaLabel.Name = "areaLabel";
+            this.areaLabel.Size = new System.Drawing.Size(31, 15);
+            this.areaLabel.TabIndex = 9;
+            this.areaLabel.Text = "Area";
+            // 
+            // maxGuestsLabel
+            // 
+            this.maxGuestsLabel.AutoSize = true;
+            this.maxGuestsLabel.Location = new System.Drawing.Point(265, 58);
+            this.maxGuestsLabel.Name = "maxGuestsLabel";
+            this.maxGuestsLabel.Size = new System.Drawing.Size(68, 15);
+            this.maxGuestsLabel.TabIndex = 10;
+            this.maxGuestsLabel.Text = "Max Guests";
+            // 
+            // guestsLabel
+            // 
+            this.guestsLabel.AutoSize = true;
+            this.guestsLabel.Location = new System.Drawing.Point(346, 58);
+            this.guestsLabel.Name = "guestsLabel";
+            this.guestsLabel.Size = new System.Drawing.Size(42, 15);
+            this.guestsLabel.TabIndex = 11;
+            this.guestsLabel.Text = "Guests";
+            // 
+            // feeLabel
+            // 
+            this.feeLabel.AutoSize = true;
+            this.feeLabel.Location = new System.Drawing.Point(427, 58);
+            this.feeLabel.Name = "feeLabel";
+            this.feeLabel.Size = new System.Drawing.Size(25, 15);
+            this.feeLabel.TabIndex = 12;
+            this.feeLabel.Text = "Fee";
+            // 
             // RoomEditingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 137);
+            this.Controls.Add(this.feeLabel);
+            this.Controls.Add(this.guestsLabel);
+            this.Controls.Add(this.maxGuestsLabel);
+            this.Controls.Add(this.areaLabel);
+            this.Controls.Add(this.noLabel);
+            this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.feeTextBox);
             this.Controls.Add(this.guestsTexBox);
             this.Controls.Add(this.maxGuestTextBox);
@@ -119,5 +185,11 @@
         private TextBox maxGuestTextBox;
         private TextBox guestsTexBox;
         private TextBox feeTextBox;
+        private Label typeLabel;
+        private Label noLabel;
+        private Label areaLabel;
+        private Label maxGuestsLabel;
+        private Label guestsLabel;
+        private Label feeLabel;
     }
 }
