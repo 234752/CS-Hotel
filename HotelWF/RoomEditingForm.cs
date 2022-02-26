@@ -13,12 +13,14 @@ namespace HotelWF
 {
     internal partial class RoomEditingForm : Form
     {
-        public RoomEditingForm(Room R)
+        private Room R;
+        public RoomEditingForm(Room r0)
         {
+            R = r0;
             InitializeComponent();
-            display(R);
+            display();
         }
-        private void display(Room R)
+        private void display()
         {
             this.typeTextBox.Text = R.getType();
             this.noTextBox.Text = R.getNumber().ToString();
@@ -26,6 +28,11 @@ namespace HotelWF
             this.maxGuestsTextBox.Text = R.getMaxGuests().ToString();
             this.guestsTextBox.Text = R.getNumberOfGuests().ToString();
             this.feeTextBox.Text = R.getFee().ToString();
+        }
+        private void editNumber()
+        {
+            int  n0 = int.Parse(this.noTextBox.Text);
+            R.setNumber(n0);
         }
     }
 }
