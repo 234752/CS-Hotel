@@ -43,10 +43,24 @@ namespace HotelWF
             }
 
         }
+        private void editArea()
+        {
+            try
+            {
+                double a0 = double.Parse(this.areaTextBox.Text);
+                R.setArea(a0);
+                this.areaTextBox.BackColor = Color.White;
+            }
+            catch (Exception e)
+            {
+                this.areaTextBox.BackColor = Color.Red;
+            }
+        }
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
             editNumber();
+            editArea();
         }
     }
 }
