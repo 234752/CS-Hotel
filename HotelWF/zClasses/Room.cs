@@ -20,9 +20,12 @@ namespace HotelWF.zClasses
         }
 
         public int getNumber() { return Number; }
+        public void setNumber(int number) { Number = number; }
         public double getArea() { return Area; }
+        public void setArea(double area) { Area = area; }
         public int getNumberOfGuests() { return Guests.Count; }
         public int getMaxGuests() { return MaxGuests; }
+        public void setMaxGuests(int maxGuests) { MaxGuests = maxGuests;}
 
         public bool addGuest(Guest G)
         {
