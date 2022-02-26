@@ -31,8 +31,22 @@ namespace HotelWF
         }
         private void editNumber()
         {
-            int  n0 = int.Parse(this.noTextBox.Text);
-            R.setNumber(n0);
+            try
+            {
+                int n0 = int.Parse(this.noTextBox.Text);
+                R.setNumber(n0);
+                this.noTextBox.BackColor = Color.White;
+            }
+            catch(Exception e)
+            {
+                this.noTextBox.BackColor = Color.Red;
+            }
+
+        }
+
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            editNumber();
         }
     }
 }
