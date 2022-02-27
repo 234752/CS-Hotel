@@ -57,6 +57,20 @@ namespace HotelWF
             }
         }
 
+        private void editMaxGuests()
+        {
+            try
+            {
+                int m0 = int.Parse(this.maxGuestsTextBox.Text);
+                R.setMaxGuests(m0);
+                this.noTextBox.BackColor = Color.White;
+            }
+            catch (Exception e)
+            {
+                this.noTextBox.BackColor = Color.Red;
+            }
+        }
+
         private void confirmButton_Click(object sender, EventArgs e)
         {
             editNumber();
