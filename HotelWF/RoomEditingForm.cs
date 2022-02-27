@@ -62,12 +62,12 @@ namespace HotelWF
             try
             {
                 int m0 = int.Parse(this.maxGuestsTextBox.Text);
-                R.setMaxGuests(m0);
-                this.noTextBox.BackColor = Color.White;
+                if (!R.setMaxGuests(m0)) throw new Exception();
+                this.maxGuestsTextBox.BackColor = Color.White;
             }
             catch (Exception e)
             {
-                this.noTextBox.BackColor = Color.Red;
+                this.maxGuestsTextBox.BackColor = Color.Red;
             }
         }
 
@@ -75,6 +75,7 @@ namespace HotelWF
         {
             editNumber();
             editArea();
+            editMaxGuests();
         }
     }
 }
