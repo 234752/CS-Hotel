@@ -63,7 +63,7 @@
             this.displayAccessButton = new System.Windows.Forms.Button();
             this.addBalanceButton = new System.Windows.Forms.Button();
             this.addBalanceInput = new System.Windows.Forms.TextBox();
-            this.form2Button = new System.Windows.Forms.Button();
+            this.editRoomButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GuestGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoomGrid)).BeginInit();
             this.AccessPanel.SuspendLayout();
@@ -390,22 +390,22 @@
             this.addBalanceInput.Size = new System.Drawing.Size(70, 23);
             this.addBalanceInput.TabIndex = 26;
             // 
-            // form2Button
+            // editRoomButton
             // 
-            this.form2Button.Location = new System.Drawing.Point(991, 343);
-            this.form2Button.Name = "form2Button";
-            this.form2Button.Size = new System.Drawing.Size(75, 23);
-            this.form2Button.TabIndex = 27;
-            this.form2Button.Text = "form 2";
-            this.form2Button.UseVisualStyleBackColor = true;
-            this.form2Button.Click += new System.EventHandler(this.form2Button_Click);
+            this.editRoomButton.Location = new System.Drawing.Point(721, 149);
+            this.editRoomButton.Name = "editRoomButton";
+            this.editRoomButton.Size = new System.Drawing.Size(97, 23);
+            this.editRoomButton.TabIndex = 27;
+            this.editRoomButton.Text = "Edit Room";
+            this.editRoomButton.UseVisualStyleBackColor = true;
+            this.editRoomButton.Click += new System.EventHandler(this.form2Button_Click);
             // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 663);
-            this.Controls.Add(this.form2Button);
+            this.Controls.Add(this.editRoomButton);
             this.Controls.Add(this.addBalanceInput);
             this.Controls.Add(this.addBalanceButton);
             this.Controls.Add(this.displayAccessButton);
@@ -477,6 +477,6 @@
         private DataGridViewTextBoxColumn RoomMaxGuests;
         private DataGridViewTextBoxColumn RoomNumberOfGuests;
         private DataGridViewTextBoxColumn RoomFee;
-        private Button form2Button;
+        private Button editRoomButton;
     }
 }

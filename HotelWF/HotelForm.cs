@@ -248,6 +248,7 @@ namespace HotelWF
             RoomEditingForm editingForm = new RoomEditingForm(CurrentRoom);
             editingForm.StartPosition = FormStartPosition.CenterParent;
             editingForm.ShowDialog();
+            REFRESH();
         }
     }
 }
