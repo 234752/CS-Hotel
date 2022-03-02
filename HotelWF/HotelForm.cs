@@ -126,6 +126,8 @@ namespace HotelWF
             if (e.RowIndex == -1) return;
             int indexR = this.RoomGrid.CurrentCell.RowIndex;
             CurrentRoom = MainHotel.RoomList[indexR];
+            if (CurrentRoom.getNumberOfGuests() != 0) CurrentGuest = CurrentRoom.Guests.First();
+            else CurrentGuest = new Guest("9", 9.9);
             REFRESH();
         }
 
