@@ -287,18 +287,16 @@
             this.revenueLabel.AutoSize = true;
             this.revenueLabel.Location = new System.Drawing.Point(1084, 60);
             this.revenueLabel.Name = "revenueLabel";
-            this.revenueLabel.Size = new System.Drawing.Size(38, 15);
+            this.revenueLabel.Size = new System.Drawing.Size(0, 15);
             this.revenueLabel.TabIndex = 16;
-            this.revenueLabel.Text = "label1";
             // 
             // costsLabel
             // 
             this.costsLabel.AutoSize = true;
             this.costsLabel.Location = new System.Drawing.Point(1084, 95);
             this.costsLabel.Name = "costsLabel";
-            this.costsLabel.Size = new System.Drawing.Size(38, 15);
+            this.costsLabel.Size = new System.Drawing.Size(0, 15);
             this.costsLabel.TabIndex = 17;
-            this.costsLabel.Text = "label1";
             // 
             // countRevenueButton
             // 
